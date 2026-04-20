@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "slug": "redesigning-checkout",
+    "published": true
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "content": {
+        "title": "Redesigning checkout to reduce drop-off",
+        "summary": "Led end-to-end redesign that cut checkout abandonment by 34% in 8 weeks.",
+        "role": "Lead Product Designer",
+        "company": "Acme Retail",
+        "year": "2025",
+        "duration": "3 months",
+        "coverImageUrl": ""
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "The problem", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Users were abandoning checkout at a 67% rate. Most drop-off happened on the payment step. The existing flow hadn't been updated in 4 years and wasn't mobile-optimized."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "What I owned", "level": 3 }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "User research with 12 recent abandoners",
+          "End-to-end flows and wireframes",
+          "Hi-fi UI and Figma prototype",
+          "Eng handoff and QA"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Results", "level": 2 }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "+34% checkout completion (8 weeks post-launch)",
+          "−52% drop-off on the payment step",
+          "4.8★ App Store rating after launch"
+        ]
+      }
+    },
+    {
+      "type": "quote",
+      "content": {
+        "text": "The new checkout feels like a completely different product. Our mobile conversion finally matches desktop.",
+        "attribution": "Head of Growth"
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Reflection", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Running research before wireframes saved 2 weeks of rework. Next time I'd test with mobile-first users earlier — desktop bias crept into early wireframes and we caught it late."
+      }
+    }
+  ]
+}

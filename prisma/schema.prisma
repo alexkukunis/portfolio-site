@@ -7,17 +7,23 @@ datasource db {
 }
 
 model CaseStudy {
-  id          String   @id @default(cuid())
-  title       String
-  summary     String
-  imageUrl    String?
-  role        String
-  company     String
-  year        String
-  duration    String
-  blocks      CaseStudyBlock[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id             String   @id @default(cuid())
+  slug           String   @unique
+  title          String
+  summary        String
+  imageUrl       String?
+  coverImageUrl  String?
+  role           String
+  company        String
+  year           String
+  duration       String
+  published      Boolean  @default(false)
+  publishedAt    DateTime?
+  blocks         CaseStudyBlock[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([published, updatedAt])
 }
 
 model CaseStudyBlock {
@@ -27,6 +33,8 @@ model CaseStudyBlock {
   order       Int
   caseStudyId String
   caseStudy   CaseStudy @relation(fields: [caseStudyId], references: [id], onDelete: Cascade)
+
+  @@index([caseStudyId, order])
 }
 
 model Skill {

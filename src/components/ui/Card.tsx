@@ -16,11 +16,7 @@ export default function Card({
   return (
     <div
       onClick={onClick}
-      className={`
-        bg-white dark:bg-slate-800 rounded-2xl shadow-sm
-        ${hoverable ? "cursor-pointer hover:shadow-lg transition-shadow duration-300" : ""}
-        ${className}
-      `}
+      className={`card ${hoverable ? "cursor-pointer hover:bg-[#202020] transition-colors duration-200" : ""} ${className}`}
     >
       {children}
     </div>
