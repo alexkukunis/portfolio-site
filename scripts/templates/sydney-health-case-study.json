@@ -103,57 +103,42 @@
       }
     },
     {
-      "type": "heading",
-      "content": { "text": "Features", "level": 3 }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "View Plan Details", "level": 3 }
-    },
-    {
-      "type": "text",
+      "type": "feature-grid",
       "content": {
-        "body": "Get a quick overview of your plan details."
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Check Claim Status", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Monitor the status of your claims easily."
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "See Applied Benefits", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Stay informed about your applied benefits."
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Access Digital ID Card", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Conveniently access your digital ID card."
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Live Chat with a Physician", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Secure in-app chat with a primary health physician."
+        "title": "Key Features",
+        "subtitle": "Core capabilities designed into the Sydney Health experience.",
+        "features": [
+          {
+            "icon": "fileText",
+            "title": "Plan Details",
+            "description": "Quick overview of plan details, coverage info, and benefits at a glance."
+          },
+          {
+            "icon": "search",
+            "title": "Claim Status",
+            "description": "Track and monitor the status of claims in real time."
+          },
+          {
+            "icon": "barChart",
+            "title": "Applied Benefits",
+            "description": "Stay informed about your applied benefits and remaining allowances."
+          },
+          {
+            "icon": "id",
+            "title": "Digital ID Card",
+            "description": "Conveniently access your digital ID card anytime, anywhere."
+          },
+          {
+            "icon": "messageCircle",
+            "title": "Live Chat",
+            "description": "Secure in-app chat with a primary health physician on demand."
+          },
+          {
+            "icon": "shield",
+            "title": "Privacy & Security",
+            "description": "End-to-end encryption and biometric auth to protect your health data."
+          }
+        ]
       }
     },
     {

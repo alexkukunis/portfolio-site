@@ -12,6 +12,8 @@ import { carouselDefault, carouselMeta, CarouselEditor, RenderCarousel } from '.
 import { appStoreScreenshotsDefault, appStoreScreenshotsMeta, RenderAppStoreScreenshots } from './components/AppStoreScreenshotsBlock';
 import { AppStoreScreenshotsEditor } from './components/AppStoreScreenshotsEditor';
 
+import { featureGridDefault, featureGridMeta, RenderFeatureGrid } from './components/FeatureGridBlock';
+
 export interface BlockDefinition<T extends BlockType> {
   type: T;
   label: string;
@@ -88,6 +90,13 @@ export const blockRegistry: Registry = {
     Editor: AppStoreScreenshotsEditor,
     Render: RenderAppStoreScreenshots,
     schema: blockSchemas['appstore-screenshots'],
+  },
+  'feature-grid': {
+    ...featureGridMeta,
+    defaultContent: featureGridDefault,
+    Editor: () => null,
+    Render: RenderFeatureGrid,
+    schema: blockSchemas['feature-grid'],
   },
 };
 

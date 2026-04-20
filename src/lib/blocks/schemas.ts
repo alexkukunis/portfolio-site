@@ -69,6 +69,18 @@ export const appStoreScreenshotsSchema = z.object({
   }).default({ url: '', caption: '', alt: '' }),
 });
 
+export const featureGridSchema = z.object({
+  title: str,
+  subtitle: str,
+  features: z.array(
+    z.object({
+      icon: str,
+      title: str,
+      description: str,
+    }),
+  ).default([]),
+});
+
 export const blockSchemas: Record<BlockType, z.ZodTypeAny> = {
   hero: heroSchema,
   heading: headingSchema,
@@ -79,6 +91,7 @@ export const blockSchemas: Record<BlockType, z.ZodTypeAny> = {
   twocolumn: twocolumnSchema,
   carousel: carouselSchema,
   'appstore-screenshots': appStoreScreenshotsSchema,
+  'feature-grid': featureGridSchema,
 };
 
 export function validateBlockContent(type: BlockType, content: unknown) {

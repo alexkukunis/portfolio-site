@@ -7,7 +7,8 @@ export type BlockType =
   | 'quote'
   | 'twocolumn'
   | 'carousel'
-  | 'appstore-screenshots';
+  | 'appstore-screenshots'
+  | 'feature-grid';
 
 export type BlockCategory = 'template' | 'content' | 'media';
 
@@ -70,6 +71,18 @@ export interface AppStoreScreenshotsContent {
   featureImage: { url: string; caption: string; alt: string };
 }
 
+export interface FeatureGridItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface FeatureGridContent {
+  title: string;
+  subtitle?: string;
+  features: FeatureGridItem[];
+}
+
 export interface BlockContentMap {
   hero: HeroContent;
   heading: HeadingContent;
@@ -80,6 +93,7 @@ export interface BlockContentMap {
   twocolumn: TwoColumnContent;
   carousel: CarouselContent;
   'appstore-screenshots': AppStoreScreenshotsContent;
+  'feature-grid': FeatureGridContent;
 }
 
 export type Block<T extends BlockType = BlockType> = {
