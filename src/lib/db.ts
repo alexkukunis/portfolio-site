@@ -1,4 +1,14 @@
-import { PrismaClient } from "../generated/prisma/client";
+import { execSync } from 'child_process';
+import { PrismaClient } from '../generated/prisma/client';
+
+console.log('Running database migrations...');
+try {
+  execSync('npx prisma migrate deploy', { stdio: 'inherit' });
+  console.log('Migrations completed successfully.');
+} catch (error) {
+  console.error('Migration failed:', error);
+  process.exit(1);
+}
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
