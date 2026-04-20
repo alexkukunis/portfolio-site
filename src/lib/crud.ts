@@ -1,6 +1,4 @@
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/db';
 
 export async function createCaseStudy(data: {
   title: string;
@@ -29,7 +27,6 @@ export async function getCaseStudies() {
 }
 
 export async function updateCaseStudy(id: string, data: any) {
-  // Simplistic update - in reality, would handle blocks diffing
   return await prisma.caseStudy.update({
     where: { id },
     data,
