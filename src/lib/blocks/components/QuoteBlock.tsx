@@ -7,7 +7,7 @@ export const quoteMeta = {
   type: 'quote' as const,
   label: 'Quote',
   icon: '❝',
-  category: 'social-proof' as const,
+  category: 'content' as const,
 };
 export const quoteDefault: QuoteContent = { text: '', attribution: '' };
 

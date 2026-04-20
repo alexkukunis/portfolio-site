@@ -2,11 +2,28 @@ import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
 import LoginForm from '@/components/admin/LoginForm';
 import CaseStudyEditor from '@/components/admin/editor/CaseStudyEditor';
-import { draftFromServer } from '@/components/admin/editor/useCaseStudyDraft';
 import { getCaseStudyById } from '@/lib/crud';
 
 interface Props {
   params: Promise<{ id: string }>;
+}
+
+function uid(): string {
+  return Math.random().toString(36).slice(2, 10);
+}
+
+function draftFromServer(cs: any) {
+  return {
+    id: cs.id,
+    slug: cs.slug ?? '',
+    published: !!cs.published,
+    blocks: (cs.blocks ?? []).map((b: any) => ({
+      key: uid(),
+      id: b.id,
+      type: b.type as string,
+      content: b.content,
+    })),
+  };
 }
 
 export default async function EditCaseStudyPage({ params }: Props) {

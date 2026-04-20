@@ -32,15 +32,18 @@ export function slugify(input: string): string {
 }
 
 async function ensureUniqueSlug(base: string, excludeId?: string): Promise<string> {
+  if (!base) base = `untitled-${Date.now()}`;
   let slug = base;
   let i = 1;
-  // Loop until we find a free slug
-  while (true) {
+  const MAX = 100;
+  while (i < MAX) {
     const existing = await prisma.caseStudy.findUnique({ where: { slug } });
     if (!existing || existing.id === excludeId) return slug;
     i += 1;
     slug = `${base}-${i}`;
   }
+  // Fallback: append random suffix
+  return `${base}-${Date.now()}`;
 }
 
 /**

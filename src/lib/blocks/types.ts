@@ -4,7 +4,10 @@ export type BlockType =
   | 'text'
   | 'image'
   | 'list'
-  | 'quote';
+  | 'quote'
+  | 'twocolumn'
+  | 'carousel'
+  | 'appstore-screenshots';
 
 export type BlockCategory = 'template' | 'content' | 'media';
 
@@ -16,6 +19,8 @@ export interface HeroContent {
   year: string;
   duration: string;
   coverImageUrl: string;
+  logoUrl: string;
+  logoUrlDark: string;
 }
 
 export interface HeadingContent {
@@ -43,6 +48,28 @@ export interface QuoteContent {
   attribution: string;
 }
 
+export interface TwoColumnContent {
+  side: 'left' | 'right';
+  text: string;
+  label: string;
+}
+
+export interface CarouselSlide {
+  url: string;
+  alt: string;
+}
+
+export interface CarouselContent {
+  slides: CarouselSlide[];
+}
+
+export interface AppStoreScreenshotsContent {
+  title: string;
+  subtitle: string;
+  screenshots: Array<{ url: string; alt: string }>;
+  featureImage: { url: string; caption: string; alt: string };
+}
+
 export interface BlockContentMap {
   hero: HeroContent;
   heading: HeadingContent;
@@ -50,6 +77,9 @@ export interface BlockContentMap {
   image: ImageBlockContent;
   list: ListContent;
   quote: QuoteContent;
+  twocolumn: TwoColumnContent;
+  carousel: CarouselContent;
+  'appstore-screenshots': AppStoreScreenshotsContent;
 }
 
 export type Block<T extends BlockType = BlockType> = {

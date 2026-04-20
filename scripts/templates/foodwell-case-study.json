@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "slug": "foodwell-healthy-meal-delivery",
+    "published": true
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "content": {
+        "title": "Making healthy meals effortless with FoodWell",
+        "summary": "Redesigned the ordering workflow and checkout to lift conversion from 2.5% to 4.5%, powered by smart meal recommendations and an urgency-driven checkout timer.",
+        "role": "Interaction Designer",
+        "company": "FoodWell",
+        "year": "2025",
+        "duration": "8 Weeks",
+        "coverImageUrl": "",
+        "logoUrl": "",
+        "logoUrlDark": ""
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "About FoodWell", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "FoodWell is a subscription-based healthy food delivery service that offers customers monthly meal plans, complete with fresh ingredients and easy-to-follow recipe cards. The goal was to create a digital experience that supported the service and provided a seamless, intuitive user experience."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Research", "level": 2 }
+    },
+    {
+      "type": "twocolumn",
+      "content": {
+        "side": "left",
+        "text": "FoodWell customers were struggling with the existing ordering workflow — encountering a lack of smart recommendations for food discovery and a checkout process devoid of urgency.\n\nThrough interviews and a survey, customers emphasized the importance of convenience, affordability, and variety in meal plans.",
+        "label": "Research"
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Key Findings", "level": 3 }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "Customers are seeking a more streamlined ordering process with personalized meal recommendations",
+          "Urgency in the checkout process is crucial for prompt decision-making",
+          "A simplified ordering flow is needed to reduce user friction",
+          "Smart recommendations based on user history and preferences would improve engagement"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Design Criteria", "level": 2 }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "Streamlined Ordering Process — Simplify and condense the flow from meal selection to checkout",
+          "Smart Recommendations — Implement an algorithm to suggest meals based on user preferences",
+          "Urgency in Checkout — Incorporate a countdown timer to prompt users to complete orders swiftly",
+          "Improve Conversion Rate — Target an increase from 2.5% to 4.5% by optimizing the checkout flow",
+          "Personalized Experience — Develop a dashboard for order tracking, subscriptions, and account details"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Design", "level": 2 }
+    },
+    {
+      "type": "twocolumn",
+      "content": {
+        "side": "right",
+        "text": "For FoodWell's digital experience, the primary focus was on creating a streamlined and intuitive ordering process. Thorough user testing was conducted to understand pain points in the existing workflow, and the interface was redesigned to minimize steps and maximize user efficiency.\n\nStrategically placed call-to-action buttons ensured that users could navigate from selecting meal plans to completing orders seamlessly.",
+        "label": "Design"
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "01 — Simplified Ordering Workflow", "level": 3 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "The user interface was optimized for easy navigation, condensing order placement steps to enhance the overall user experience. Users can browse, customize, and add meals to their cart in as few steps as possible."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "02 — Smart Recommendations", "level": 3 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "An intuitive meal discovery interface was designed, implementing personalized meal suggestions based on user history and preferences. This feature encourages exploration of new meals tailored to individual tastes and dietary needs."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Screens", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Below are key screens from the redesigned FoodWell experience — from meal discovery to checkout."
+      }
+    },
+    {
+      "type": "carousel",
+      "content": {
+        "slides": [
+          { "url": "", "alt": "Meal Discovery" },
+          { "url": "", "alt": "Meal Details" },
+          { "url": "", "alt": "Checkout" }
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Evaluation", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "User testing was conducted at various stages of development, providing valuable insights into user behavior and preferences. Metrics were tracked for order completion rates, user engagement, and satisfaction."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Findings", "level": 3 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Significant improvements in user experience were observed, leading to increased conversions and enhanced customer retention. The streamlined ordering workflow and smart recommendations contributed to these positive outcomes."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Future Considerations", "level": 3 }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "Continuous Improvement — Regularly gather user feedback to refine the digital experience",
+          "Accessibility and Inclusivity — Ensure the platform is accessible to users with diverse needs and language options",
+          "Expansion Opportunities — Explore partnerships with nutritionists or chefs to enhance meal recommendations",
+          "Dietary Specializations — Consider expanding to cater to specific dietary requirements or preferences"
+        ]
+      }
+    },
+    {
+      "type": "quote",
+      "content": {
+        "text": "Redesigning FoodWell's ordering flow taught me that simplification isn't about removing features — it's about surfacing the right thing at the right moment so users feel confident, not overwhelmed.",
+        "attribution": "Interaction Designer, FoodWell"
+      }
+    }
+  ]
+}

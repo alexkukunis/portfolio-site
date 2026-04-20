@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "slug": "cozies-maternity-fashion-ux",
+    "published": true
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "content": {
+        "title": "Designing Cozies — A User-Centered Approach to Maternity Fashion",
+        "summary": "Led end-to-end UX/UI design for an emerging maternity fashion brand, translating extensive user research into a seamless shopping experience that prioritizes comfort, intuitive sizing, and sustainable practices for expectant and new mothers.",
+        "role": "Interaction Designer",
+        "company": "Cozies",
+        "year": "2025",
+        "duration": "6 Weeks",
+        "coverImageUrl": ""
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "About Cozies", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Cozies is an emerging provider of maternity fashion and accessories, specializing in trendy and comfortable clothing for both mothers and babies. The brand aims to make the journey into parenthood enjoyable and stress-free for customers by offering carefully curated products that balance style, comfort, and sustainability."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "The Challenge", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Expecting and new mothers face unique challenges when shopping for maternity and baby clothing — finding garments that accommodate changing body shapes, navigating confusing size guides, and prioritizing comfort without sacrificing style. The goal was to design a digital experience that addresses these pain points while building trust in a new brand."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Research", "level": 2 }
+    },
+    {
+      "type": "twocolumn",
+      "content": {
+        "side": "left",
+        "text": "To gain a deep understanding of the needs, preferences, and pain points of expecting and new mothers, the design team conducted extensive user research — observing mothers in maternity stores, pediatrician offices, and online forums.\n\nWe interviewed 20 expectant mothers and 15 new mothers from diverse backgrounds, complemented by a survey of 150 respondents.",
+        "label": "Research"
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Key Findings", "level": 3 }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "Comfort and mobility are paramount during pregnancy and postpartum recovery",
+          "Sizing is a frustrating experience with frequent body dimension changes",
+          "New mothers prioritize ease of use and functionality when dressing themselves and their babies",
+          "Sustainability and eco-friendliness are important considerations"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Design Criteria", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Based on comprehensive research, the following key design criteria were established for the Cozies experience:"
+      }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "Comfort and Versatility — Prioritize comfort and mobility in clothing designs while offering versatile styles",
+          "Intuitive Sizing — Implement size guides and fit recommendations for changing body shapes",
+          "Efficient Navigation — Streamline browsing and shopping for time-constrained mothers",
+          "Sustainability — Incorporate eco-friendly materials and packaging",
+          "Community and Support — Foster connection and provide resources for emotional and practical needs"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Design Process", "level": 2 }
+    },
+    {
+      "type": "twocolumn",
+      "content": {
+        "side": "right",
+        "text": "01 — User Personas\n\nDetailed user personas were created representing primary audience segments — first-time expectant mothers, experienced mothers, and grandparents — ensuring design decisions aligned with real user needs and behaviors.",
+        "label": "Personas"
+      }
+    },
+    {
+      "type": "twocolumn",
+      "content": {
+        "side": "left",
+        "text": "02 — User Flows\n\nDiagrams and wireframes illustrated key user journeys, including browsing and purchasing maternity wear, creating a baby registry, and accessing sizing guides. Each flow was mapped to minimize friction.",
+        "label": "User Flows"
+      }
+    },
+    {
+      "type": "twocolumn",
+      "content": {
+        "side": "right",
+        "text": "03 — Information Architecture\n\nThe structure and organization featured intuitive category hierarchies, navigation menus, and robust search functionality tailored to maternity and baby clothing needs.",
+        "label": "Architecture"
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "UI Design", "level": 2 }
+    },
+    {
+      "type": "twocolumn",
+      "content": {
+        "side": "left",
+        "text": "Visual designs showcased interface elements including the homepage, product listing pages, checkout process, and unique features like virtual try-on and size calculators. The visual language was warm, approachable, and aligned with the Cozies brand identity.",
+        "label": "UI Design"
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Accessibility & Usability Testing", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Prototypes and designs were tested with real users through moderated in-person sessions and remote usability studies. Special consideration was given to accommodating users with disabilities or temporary limitations during pregnancy — including color contrast optimization, typography choices, and alternative input methods."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Prototype", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "An interactive prototype showcasing the full user journey — from landing on the homepage to completing a purchase — is coming soon."
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Evaluation & Future Direction", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Key evaluation methods include monitoring usability metrics and gathering feedback through post-purchase surveys and direct customer support communication."
+      }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "Navigation Optimization — Product categories and size filters need more prominent display",
+          "Mobile-First Approach — Increasing mobile usage demands further responsive design optimization",
+          "Augmented Reality — Exploring AR and voice interfaces for virtual try-on experiences",
+          "Personalized Recommendations — Offering tailored product suggestions based on preferences and body shapes",
+          "Sustainability Initiatives — Implementing sustainable practices from sourcing to packaging",
+          "Personalized Styling Service — Curated wardrobes based on individual preferences and lifestyles"
+        ]
+      }
+    },
+    {
+      "type": "quote",
+      "content": {
+        "text": "Designing for Cozies reinforced that the best products come from deep empathy with users. Every research insight became a design decision.",
+        "attribution": "Design Team Lead, Cozies"
+      }
+    }
+  ]
+}

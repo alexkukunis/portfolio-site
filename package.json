@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "db:seed": "tsx prisma/seed.ts",
-    "cs:create": "tsx scripts/create-case-study.ts"
+    "cs:create": "tsx scripts/create-case-study.ts",
+    "db:seed:sydney": "tsx scripts/seed-sydney-health.mjs"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

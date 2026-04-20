@@ -7,6 +7,10 @@ import { textDefault, textMeta, TextEditor, TextRender } from './components/Text
 import { imageDefault, imageMeta, ImageEditor, ImageRender } from './components/ImageBlock';
 import { listDefault, listMeta, ListEditor, ListRender } from './components/ListBlock';
 import { quoteDefault, quoteMeta, QuoteEditor, QuoteRender } from './components/QuoteBlock';
+import { twocolumnDefault, twocolumnMeta, TwoColumnEditor, RenderTwoColumn } from './components/TwoColumnBlock';
+import { carouselDefault, carouselMeta, CarouselEditor, RenderCarousel } from './components/CarouselBlock';
+import { appStoreScreenshotsDefault, appStoreScreenshotsMeta, RenderAppStoreScreenshots } from './components/AppStoreScreenshotsBlock';
+import { AppStoreScreenshotsEditor } from './components/AppStoreScreenshotsEditor';
 
 export interface BlockDefinition<T extends BlockType> {
   type: T;
@@ -63,6 +67,27 @@ export const blockRegistry: Registry = {
     Editor: QuoteEditor,
     Render: QuoteRender,
     schema: blockSchemas.quote,
+  },
+  twocolumn: {
+    ...twocolumnMeta,
+    defaultContent: twocolumnDefault,
+    Editor: TwoColumnEditor,
+    Render: RenderTwoColumn,
+    schema: blockSchemas.twocolumn,
+  },
+  carousel: {
+    ...carouselMeta,
+    defaultContent: carouselDefault,
+    Editor: CarouselEditor,
+    Render: RenderCarousel,
+    schema: blockSchemas.carousel,
+  },
+  'appstore-screenshots': {
+    ...appStoreScreenshotsMeta,
+    defaultContent: appStoreScreenshotsDefault,
+    Editor: AppStoreScreenshotsEditor,
+    Render: RenderAppStoreScreenshots,
+    schema: blockSchemas['appstore-screenshots'],
   },
 };
 

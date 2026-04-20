@@ -19,12 +19,19 @@ export const heroDefault: HeroContent = {
   year: new Date().getFullYear().toString(),
   duration: '3 months',
   coverImageUrl: '',
+  logoUrl: '',
+  logoUrlDark: '',
 };
 
 export function HeroEditor({ value, onChange }: EditorProps<'hero'>) {
   const set = (patch: Partial<HeroContent>) => onChange({ ...value, ...patch });
   return (
     <div className="grid gap-4">
+      {/* Logo uploads - dark/light aware */}
+      <div className="grid grid-cols-2 gap-3">
+        <ImageField value={value.logoUrl} onChange={(url) => set({ logoUrl: url })} label="Logo (light mode)" />
+        <ImageField value={value.logoUrlDark} onChange={(url) => set({ logoUrlDark: url })} label="Logo (dark mode)" />
+      </div>
       <ImageField value={value.coverImageUrl} onChange={(url) => set({ coverImageUrl: url })} label="Cover image (1600×900)" />
       <Field label="Title (H1)">
         <TextInput value={value.title} onChange={(v) => set({ title: v })} placeholder="Verb + what changed + why it mattered" />
@@ -52,8 +59,40 @@ export function HeroEditor({ value, onChange }: EditorProps<'hero'>) {
 
 export function HeroRender({ content }: RenderProps<'hero'>) {
   const pills = [content.role, content.company, content.year, content.duration].filter(Boolean);
+  const logo = content.logoUrl;
+  const logoDark = content.logoUrlDark;
+
   return (
     <section className="pt-8 pb-16">
+      {/* Logo bar - dark/light mode aware */}
+      {logo || logoDark ? (
+        <div className="mb-10 flex items-center justify-center min-h-[48px] lg:justify-start">
+          {logo ? (
+            <img
+              src={logo}
+              alt=""
+              className="h-8 w-auto object-contain dark:hidden mx-auto lg:mx-0"
+            />
+          ) : null}
+          {logoDark ? (
+            <img
+              src={logoDark}
+              alt=""
+              className="h-8 w-auto object-contain hidden dark:block mx-auto lg:mx-0"
+            />
+          ) : null}
+          {!logoDark && logo ? (
+            <img
+              src={logo}
+              alt=""
+              className="h-8 w-auto object-contain hidden sm:block"
+            />
+          ) : null}
+        </div>
+      ) : (
+        <div className="mb-4" />
+      )}
+
       <div className="rounded-3xl overflow-hidden border border-border bg-surface mb-10">
         {content.coverImageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element

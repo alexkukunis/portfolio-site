@@ -1,27 +1,27 @@
 import { readFileSync } from 'node:fs';
-import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
 import { PrismaClient } from '@prisma/client';
 import { Pool } from 'pg';
 import { PrismaPg } from '@prisma/adapter-pg';
-import { validateBlockContent } from '../src/lib/blocks/schemas';
-import type { BlockType } from '../src/lib/blocks/types';
 
-const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-const adapter = new PrismaPg(pool);
-const prisma = new PrismaClient({ adapter });
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 async function main() {
-  const templatePath = path.join(process.cwd(), 'scripts/templates/cozies-case-study.json');
+  const DATABASE_URL = "postgresql://postgres:kfSwaTigJiBFZTHrUUFaTpCzmKBBMLZy@hopper.proxy.rlwy.net:33870/railway";
+  const pool = new Pool({ connectionString: DATABASE_URL });
+  const adapter = new PrismaPg(pool);
+  const prisma = new PrismaClient({ adapter });
+
+  const templatePath = join(__dirname, 'templates/sydney-health-case-study.json');
   const raw = readFileSync(templatePath, 'utf8');
-  const template = JSON.parse(raw) as {
-    meta: { slug: string; published: boolean };
-    blocks: { type: BlockType; content: any }[];
-  };
+  const template = JSON.parse(raw);
 
   const hero = template.blocks.find((b) => b.type === 'hero')?.content ?? {};
-  const sanitized = template.blocks.map((b, i) => ({
+
+  const blocks = template.blocks.map((b, i) => ({
     type: b.type,
-    content: validateBlockContent(b.type, b.content) as any,
+    content: b.content,
     order: i,
   }));
 
@@ -40,33 +40,36 @@ async function main() {
   };
 
   const existing = await prisma.caseStudy.findUnique({ where: { slug: template.meta.slug } });
+
   if (existing) {
     await prisma.caseStudyBlock.deleteMany({ where: { caseStudyId: existing.id } });
     await prisma.caseStudy.update({
       where: { id: existing.id },
       data: {
         ...payload,
-        blocks: { create: sanitized },
+        blocks: {
+          create: blocks,
+        },
       },
     });
-    console.log(`Re-seeded "${payload.title}"`);
+    console.log(`Re-seeded "${payload.title}" with ${blocks.length} blocks`);
   } else {
     await prisma.caseStudy.create({
       data: {
         ...payload,
-        blocks: { create: sanitized },
+        blocks: {
+          create: blocks,
+        },
       },
     });
-    console.log(`Seeded "${payload.title}"`);
+    console.log(`Seeded "${payload.title}" with ${blocks.length} blocks`);
   }
+
+  await prisma.$disconnect();
+  await pool.end();
 }
 
-main()
-  .catch((e) => {
-    console.error(e);
-    process.exit(1);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-    await pool.end();
-  });
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
