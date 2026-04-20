@@ -3,6 +3,7 @@
 import PageLayout from "@/components/layout/PageLayout";
 import Card from "@/components/ui/Card";
 import Input from "@/components/ui/Input";
+import Select from "@/components/ui/Select";
 import Textarea from "@/components/ui/Textarea";
 import Button from "@/components/ui/Button";
 import { useState } from "react";
@@ -57,9 +58,8 @@ export default function EditCaseStudyPage() {
                 value={formData.title}
                 onChange={(e) => handleChange("title", e.target.value)}
               />
-              <Input
+              <Select
                 label="Category"
-                as="select"
                 value={formData.category}
                 onChange={(e) => handleChange("category", e.target.value)}
               >
@@ -67,7 +67,7 @@ export default function EditCaseStudyPage() {
                 <option value="Web">Web</option>
                 <option value="Design System">Design System</option>
                 <option value="Research">Research</option>
-              </Input>
+              </Select>
             </div>
             <Input
               label="Subtitle"

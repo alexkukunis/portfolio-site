@@ -3,6 +3,7 @@
 import PageLayout from "@/components/layout/PageLayout";
 import Card from "@/components/ui/Card";
 import Input from "@/components/ui/Input";
+import Select from "@/components/ui/Select";
 import Textarea from "@/components/ui/Textarea";
 import Button from "@/components/ui/Button";
 import { useState, type ChangeEvent } from "react";
@@ -77,9 +78,8 @@ export default function NewCaseStudyPage() {
                   value={formData.role}
                   onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange("role", e.target.value)}
                 />
-                <Input
+                <Select
                   label="Category"
-                  as="select"
                   value={formData.category}
                   onChange={(e: ChangeEvent<HTMLSelectElement>) => handleChange("category", e.target.value)}
                 >
@@ -87,7 +87,7 @@ export default function NewCaseStudyPage() {
                   <option value="Web">Web</option>
                   <option value="Design System">Design System</option>
                   <option value="Research">Research</option>
-                </Input>
+                </Select>
               </div>
             </section>
 
