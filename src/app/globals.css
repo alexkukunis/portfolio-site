@@ -17,8 +17,8 @@
   --color-foreground: var(--foreground);
   --color-text-muted: var(--text-muted);
   --color-accent: var(--accent);
-  --font-sans: 'Inter', sans-serif;
-  --font-mono: monospace;
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
 body {

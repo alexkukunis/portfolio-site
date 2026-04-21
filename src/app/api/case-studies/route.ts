@@ -8,8 +8,24 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const publishedOnly = searchParams.get('published_only') !== 'false';
+    const flat = searchParams.get('flat') === 'true';
 
     const studies = await getCaseStudies({ publishedOnly });
+
+    if (flat) {
+      return NextResponse.json(studies.map(cs => ({
+        id: cs.id,
+        slug: cs.slug,
+        title: cs.title,
+        company: cs.company,
+        role: cs.role,
+        year: cs.year,
+        published: cs.published,
+        publishedAt: cs.publishedAt,
+        updatedAt: cs.updatedAt,
+        blockCount: cs.blocks.length,
+      })));
+    }
 
     return NextResponse.json({
       success: true,
