@@ -1,28 +1,19 @@
 import { NextResponse } from 'next/server';
-import { promises as fs } from 'node:fs';
-import path from 'node:path';
 import crypto from 'node:crypto';
 import { requireAdmin } from '@/lib/auth/requireAdmin';
 
 export const runtime = 'nodejs';
 
-const MAX_BYTES = 10 * 1024 * 1024; // 10 MB
+const MAX_BYTES = 5 * 1024 * 1024; // 5 MB
 const ALLOWED = /^(image\/(png|jpe?g|webp|gif|svg\+xml)|video\/(mp4|webm))$/;
 
-function extFromMime(mime: string): string {
-  if (mime === 'image/jpeg') return 'jpg';
-  if (mime === 'image/svg+xml') return 'svg';
-  return mime.split('/')[1] ?? 'bin';
-}
-
-function safeSlug(name: string): string {
-  const base = name.replace(/\.[^/.]+$/, '');
-  return base
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 40) || 'file';
-}
+const MIME_TO_EXT: Record<string, string> = {
+  'image/jpeg': 'jpeg',
+  'image/png': 'png',
+  'image/webp': 'webp',
+  'image/gif': 'gif',
+  'image/svg+xml': 'svg',
+};
 
 export async function POST(request: Request) {
   const unauthorized = await requireAdmin();
@@ -38,20 +29,21 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: `Unsupported type: ${file.type}` }, { status: 400 });
     }
     if (file.size > MAX_BYTES) {
-      return NextResponse.json({ error: 'File too large (10 MB max)' }, { status: 400 });
+      return NextResponse.json({ error: 'File too large (5 MB max)' }, { status: 400 });
     }
 
     const buf = Buffer.from(await file.arrayBuffer());
-    const ext = extFromMime(file.type);
-    const slug = safeSlug(file.name || 'file');
+    const b64 = buf.toString('base64');
     const id = crypto.randomUUID();
-    const filename = `${id}-${slug}.${ext}`;
+    const dataUrl = `data:${file.type};base64,${b64}`;
 
-    const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
-    await fs.mkdir(uploadsDir, { recursive: true });
-    await fs.writeFile(path.join(uploadsDir, filename), buf);
-
-    return NextResponse.json({ url: `/uploads/${filename}`, size: buf.length, type: file.type });
+    return NextResponse.json({
+      id,
+      url: dataUrl,
+      fileName: file.name,
+      size: buf.length,
+      type: file.type,
+    });
   } catch (error: any) {
     console.error('Upload failed:', error);
     return NextResponse.json({ error: error?.message ?? 'Upload failed' }, { status: 500 });
