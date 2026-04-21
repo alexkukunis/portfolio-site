@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { createCaseStudy, getCaseStudies } from '@/lib/crud';
 import { requireAdmin } from '@/lib/auth/requireAdmin';
 import { validateBlockContent } from '@/lib/blocks/schemas';
-import type { BlockType } from '@/lib/blocks/registry';
+import type { BlockType } from '@/lib/blocks/types';
 
 export async function GET(request: Request) {
   try {
