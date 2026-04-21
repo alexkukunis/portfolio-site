@@ -1,54 +1,22 @@
-import Link from "next/link";
-
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand */}
-          <div className="col-span-1">
-            <Link href="/" className="inline-flex items-center space-x-2 mb-4">
-              <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Portfolio
-              </span>
-            </Link>
-            <p className="text-slate-600 dark:text-slate-400 text-sm">
-              Crafting digital experiences that blend beautiful design with seamless functionality.
-            </p>
-          </div>
+    <footer className="bg-background border-t border-border">
+      <div className="max-w-5xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-muted text-sm">
+          &copy; {new Date().getFullYear()} Portfolio. All rights reserved.
+        </p>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-slate-900 dark:text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {["Home", "Case Studies", "About", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`/${item.toLowerCase().replace(" ", "-").replace("'s", "")}`}
-                    className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-semibold text-slate-900 dark:text-white mb-4">Get in Touch</h4>
-            <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-              <li>Email: hello@portfolio.com</li>
-              <li>Location: San Francisco, CA</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
-          <p className="text-slate-500 dark:text-slate-500 text-sm">
-            &copy; {new Date().getFullYear()} Portfolio. Built with Next.js and Tailwind CSS.
-          </p>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/alexkukunis/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-10 h-10 rounded-lg bg-surface text-muted hover:text-foreground hover:bg-muted transition-colors"
+          aria-label="LinkedIn"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
+          </svg>
+        </a>
       </div>
     </footer>
   );
