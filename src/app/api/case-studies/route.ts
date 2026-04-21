@@ -1,8 +1,52 @@
 import { NextResponse } from 'next/server';
-import { createCaseStudy } from '@/lib/crud';
+import { createCaseStudy, getCaseStudies } from '@/lib/crud';
 import { requireAdmin } from '@/lib/auth/requireAdmin';
 import { validateBlockContent } from '@/lib/blocks/schemas';
-import type { BlockType } from '@/lib/blocks/types';
+import type { BlockType } from '@/lib/blocks/registry';
+
+export async function GET(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const publishedOnly = searchParams.get('published_only') !== 'false';
+
+    const studies = await getCaseStudies({ publishedOnly });
+
+    return NextResponse.json({
+      success: true,
+      count: studies.length,
+      publishedOnly,
+      caseStudies: studies.map(cs => ({
+        id: cs.id,
+        slug: cs.slug,
+        title: cs.title,
+        summary: cs.summary,
+        role: cs.role,
+        company: cs.company,
+        year: cs.year,
+        duration: cs.duration,
+        coverImageUrl: cs.coverImageUrl,
+        imageUrl: cs.imageUrl,
+        published: cs.published,
+        publishedAt: cs.publishedAt,
+        createdAt: cs.createdAt,
+        updatedAt: cs.updatedAt,
+        blockCount: cs.blocks.length,
+        blocks: cs.blocks.map(b => ({
+          id: b.id,
+          type: b.type,
+          order: b.order,
+          content: b.content,
+        })),
+      })),
+    });
+  } catch (error: any) {
+    console.error('Error fetching case studies:', error);
+    return NextResponse.json(
+      { success: false, error: error?.message ?? 'Failed to fetch case studies' },
+      { status: 500 },
+    );
+  }
+}
 
 export async function POST(request: Request) {
   const unauthorized = await requireAdmin();

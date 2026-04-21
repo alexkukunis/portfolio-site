@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import type { FeatureGridContent } from '../types';
 import type { RenderProps } from '../types';
 
