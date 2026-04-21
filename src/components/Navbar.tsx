@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-lg font-bold text-foreground">
-              Portfolio
+              Alex Kukunis
             </span>
           </Link>
 
