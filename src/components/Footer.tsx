@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-background border-t border-border">
       <div className="max-w-5xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-muted text-sm">
-          &copy; {new Date().getFullYear()} Portfolio. All rights reserved.
+          &copy; {new Date().getFullYear()} Alex Kukunis. All rights reserved.
         </p>
 
         <a

@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/case-studies", label: "Case Studies" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/resume.pdf", label: "Resume" },
 ];
 
 export default function Navbar() {
