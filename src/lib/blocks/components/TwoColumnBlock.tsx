@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from 'react';
 import type { EditorProps, RenderProps } from '../types';
 import { Field, TextArea, TextInput } from './shared';
+import { ImageModal } from './ImageModal';
 
 export const twocolumnMeta = {
   type: 'twocolumn' as const,
@@ -14,6 +16,9 @@ export interface TwoColumnContent {
   side: 'left' | 'right';
   text: string;
   label: string;
+  imageUrl?: string;
+  imageCaption?: string;
+  imageAlt?: string;
 }
 
 export const twocolumnDefault: TwoColumnContent = { side: 'left', text: '', label: '' };
@@ -50,9 +55,8 @@ function ImagePlaceholder({ label, index }: { label: string; index: number }) {
           backgroundSize: '24px 24px',
         }}
       />
-      {/* Centered icon + label */}
+      {/* Centered icon */}
       <div className="relative z-10 flex flex-col items-center gap-3 text-text-muted/50 select-none">
-        {/* Minimal landscape/screenshot icon */}
         <svg
           width="48"
           height="48"
@@ -67,11 +71,27 @@ function ImagePlaceholder({ label, index }: { label: string; index: number }) {
           <circle cx="8.5" cy="8.5" r="1.5" />
           <polyline points="21 15 16 10 5 21" />
         </svg>
-        {label && <span className="text-xs tracking-wide uppercase text-text-muted/40">{label}</span>}
       </div>
-      {/* Top-left tag */}
-      <div className="absolute top-3 left-3 px-2 py-1 rounded-md border border-white/5 bg-white/5 text-[10px] uppercase tracking-widest text-text-muted/40 font-medium">
-        Image
+    </div>
+  );
+}
+
+function RealImage({ imageUrl, imageAlt, label, onZoom }: { imageUrl: string; imageAlt?: string; label: string; onZoom: () => void }) {
+  return (
+    <div className="w-full aspect-[4/3] rounded-2xl border border-border/50 overflow-hidden group relative cursor-pointer" onClick={onZoom}>
+      <img
+        src={imageUrl}
+        alt={imageAlt || label}
+        className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+        <svg className="w-12 h-12 text-white/80 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <polyline points="9 21 3 21 3 15"></polyline>
+          <line x1="21" y1="3" x2="14" y2="10"></line>
+          <line x1="3" y1="21" x2="10" y2="14"></line>
+        </svg>
       </div>
     </div>
   );
@@ -82,7 +102,6 @@ export function TwoColumnEditor({ value, onChange }: EditorProps<'twocolumn'>) {
   const set = (patch: Partial<TwoColumnContent>) => onChange({ ...v, ...patch });
   return (
     <div className="grid gap-3">
-      {/* Side toggle */}
       <Field label="Image side">
         <div className="flex gap-2">
           {(['left', 'right'] as const).map((s) => (
@@ -113,16 +132,30 @@ export function TwoColumnEditor({ value, onChange }: EditorProps<'twocolumn'>) {
 
 export function RenderTwoColumn({ content, index }: RenderProps<'twocolumn'> & { index?: number }) {
   const v = content as TwoColumnContent;
+  const [modalOpen, setModalOpen] = useState(false);
   const isLeft = v.side === 'left';
 
   return (
     <div className="my-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-      {/* Image side */}
       <div className={isLeft ? 'order-1' : 'order-1 md:order-2'}>
-        <ImagePlaceholder label={v.label} index={index ?? 0} />
+        {v.imageUrl ? (
+          <RealImage
+            imageUrl={v.imageUrl}
+            imageAlt={v.imageAlt}
+            label={v.label}
+            onZoom={() => setModalOpen(true)}
+          />
+        ) : (
+          <ImagePlaceholder label={v.label} index={index ?? 0} />
+        )}
+        <ImageModal isOpen={modalOpen} onClose={() => setModalOpen(false)} imageUrl={v.imageUrl || ''} alt={v.imageAlt || v.label} />
       </div>
-      {/* Text side */}
       <div className={`space-y-4 ${isLeft ? 'order-2' : 'order-2 md:order-1'}`}>
+        {v.label && (
+          <h3 className="text-2xl md:text-3xl font-semibold mt-0 mb-5 text-foreground leading-tight">
+            {v.label}
+          </h3>
+        )}
         <div className="prose-sm text-text-muted leading-relaxed whitespace-pre-wrap">
           {v.text}
         </div>

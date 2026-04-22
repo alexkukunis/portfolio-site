@@ -3,6 +3,12 @@ import type { BlockType } from './types';
 
 const str = z.string().default('');
 
+const linksItemSchema = z.object({
+  label: str,
+  url: z.string(),
+  icon: str.optional(),
+});
+
 export const heroSchema = z.object({
   title: str,
   summary: str,
@@ -13,6 +19,7 @@ export const heroSchema = z.object({
   coverImageUrl: str,
   logoUrl: str,
   logoUrlDark: str,
+  links: z.array(linksItemSchema).default([]).optional(),
 });
 
 export const headingSchema = z.object({
@@ -42,6 +49,9 @@ export const twocolumnSchema = z.object({
   side: z.union([z.literal('left'), z.literal('right')]).default('left'),
   text: str,
   label: str,
+  imageUrl: str.optional(),
+  imageCaption: str.optional(),
+  imageAlt: str.optional(),
 });
 
 export const carouselSchema = z.object({
@@ -69,6 +79,21 @@ export const appStoreScreenshotsSchema = z.object({
   }).default({ url: '', caption: '', alt: '' }),
 });
 
+export const imageGridSchema = z.object({
+  title: str.optional(),
+  images: z
+    .array(
+      z.object({
+        url: str,
+        alt: str,
+        caption: str,
+      }),
+    )
+    .min(1)
+    .max(6)
+    .default([]),
+});
+
 export const featureGridSchema = z.object({
   title: str,
   subtitle: str,
@@ -79,6 +104,11 @@ export const featureGridSchema = z.object({
       description: str,
     }),
   ).default([]),
+});
+
+export const linksSchema = z.object({
+  title: str.optional(),
+  links: z.array(linksItemSchema).min(1),
 });
 
 export const blockSchemas: Record<BlockType, z.ZodTypeAny> = {
@@ -92,6 +122,8 @@ export const blockSchemas: Record<BlockType, z.ZodTypeAny> = {
   carousel: carouselSchema,
   'appstore-screenshots': appStoreScreenshotsSchema,
   'feature-grid': featureGridSchema,
+  'image-grid': imageGridSchema,
+  links: linksSchema,
 };
 
 export function validateBlockContent(type: BlockType, content: unknown) {

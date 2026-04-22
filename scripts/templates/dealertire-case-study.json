@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "slug": "dealer-tire-storefront-redesign",
+    "published": true
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "content": {
+        "title": "Dealer Tire — Online Storefront Redesign",
+        "role": "Lead Senior UI/UX Designer",
+        "company": "Dealer Tire",
+        "year": "2024",
+        "duration": "",
+        "category": "retail",
+        "summary": "Dealer Tire powers tire sales for OEM dealerships across the country. I led end-to-end UX/UI design for their consumer-facing online storefront — redesigning checkout, integrating secure payments, rebuilding the design system, and fixing the session management experience that was silently killing conversions. The result was a 42% increase in conversion rate and $2.4M in additional annual revenue.",
+        "coverImageUrl": "/uploads/dealertire-thumb.png",
+        "links": [
+          {
+            "label": "Website",
+            "url": "https://www.dealertire.com",
+            "icon": "globe"
+          }
+        ]
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "alt": "HERO IMAGE A wide desktop browser mockup showing the Dealer Tire storefront — clean white background, OEM branding visible in the nav, a tire product listing page with vehicle search widget at the top. Professional, enterprise feel. Below it, a smaller iPhone mockup showing the same page in mobile view. Both side by side. Conveys scale and cross-device thinking immediately.",
+        "url": "/uploads/placeholder-hero-dealertire.png"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Overview",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Dealer Tire powers tire sales for OEM dealerships across the country. I led end-to-end UX/UI design for their consumer-facing online storefront — redesigning checkout, integrating secure payments, rebuilding the design system, and fixing the session management experience that was silently killing conversions. The result was a 42% increase in conversion rate and $2.4M in additional annual revenue."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "The Problem",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Dealers were abandoning carts at 68%. The checkout had too many steps, there was no secure online option, the pages loaded slowly, and the design system was inconsistent across every OEM storefront. Every one of these problems was measurable and every one of them was fixable."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Research",
+        "level": 2
+      }
+    },
+    {
+      "type": "twocolumn",
+      "content": {
+        "side": "left",
+        "text": "I ran structured interviews with OEM dealers, observed live usability sessions, and dug into analytics to map exactly where the drop-offs were happening. The research confirmed three things — checkout was too complex, dealers didn't trust the payment process, and slow performance made the whole experience feel unreliable.",
+        "label": "Research Methods",
+        "imageAlt": "IMAGE — Three horizontal stat bars on a dark background, stacked vertically. Clean and minimal. Top bar: \"68%\" — \"of dealers abandoned cart before completing purchase.\" Middle bar: \"847\" — \"support tickets per month related to form errors and checkout issues.\" Bottom bar: \"4.1 seconds\" — \"average time to interactive — well above acceptable threshold.\" Each number in large bold white type, label in smaller grey beneath. Feels like a war room slide.",
+        "imageUrl": "/uploads/placeholder-research-stats-dealertire.png",
+        "imageCaption": ""
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Key Design Decision — Checkout Redesign",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "The before and after here tells the whole story. Steps removed, form fields cut from 15 to 9, progress made visible, and trust signals placed exactly where doubt would appear — right next to the payment fields."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "alt": "IMAGE — Two screens side by side, clearly labelled \"Before\" and \"After.\" Left screen — Before: A cluttered multi-step checkout. Multiple form fields visible at once, no clear progress indicator, 15 input fields on screen, small text, no security badges visible, navigation options that pull focus away from completing the purchase. Feels overwhelming. A red annotation bar along the bottom lists the problems: \"9+ steps / No progress indicator / No trust signals / 15 form fields.\" Right screen — After: Clean single-flow checkout. A horizontal progress bar across the top showing three steps — Cart / Delivery / Payment — with the current step highlighted. Below it, a simplified form with 9 fields max, large input areas, a prominent green SSL badge and PCI compliance icon next to the payment section. At the bottom, one large primary button: \"Complete Order.\" A green annotation bar lists the wins: \"Streamlined flow / Clear progress / Trust signals / Smart defaults.\"",
+        "url": "/uploads/placeholder-checkout-redesign-dealertire.png"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Session Management",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "This was a quietly critical piece of work. Dealers doing large orders would get pulled away mid-checkout — a phone call, a customer walking in — and come back to a blank form and a lost cart. The three-stage system gave them a warning, then a recovery path. Session timeout incidents dropped 45% and checkout completion rose 28%."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "alt": "IMAGE — Three iPhone screens in a horizontal row, each representing one stage of the session flow. Labelled above each: \"Active,\" \"Warning,\" \"Expired.\" Screen 1 — Active: Checkout page mid-flow. Order summary visible on the right, payment fields filled in. Normal state, no alerts. Clean and focused. Screen 2 — Warning: Same checkout page but a modal has appeared over it. Modal reads \"Are you still there?\" with a countdown timer showing 30:00 ticking down. Two options — \"Continue Checkout\" as a primary button, and a smaller \"Call us\" link below. The cart and payment fields are still visible dimmed behind the modal. Feels urgent but not alarming. Screen 3 — Expired: Session has ended. A soft banner replaces the payment section: \"Your session expired — please re-enter your payment information to continue.\" Cart items preserved and visible in the order summary. A single CTA: \"Re-enter payment info.\" The order hasn't been lost, just the payment details.",
+        "url": "/uploads/placeholder-session-management-dealertire.png"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Design System",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Each OEM storefront — Toyota, Ford, others — had its own brand colours and button styles. The design system was built with CSS variables so a single component could skin itself to any OEM without rebuilding anything. This cut engineering time significantly and kept every storefront visually consistent without being identical."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "alt": "IMAGE — A component sheet layout on a light grey background. Grid of UI components, clearly organised. Top row: button variants — primary, secondary, disabled, loading state — shown in two colour variants (one Toyota red, one neutral) to show OEM theme switching. Second row: form input states — default, focused, error, success. Third row: notification and alert components — confirmation banner in green, error banner in red, session warning in amber. Bottom row: product card component showing tire image, name, price, fitment button. Each component has a small label beneath it. Looks like a real Figma component library screenshot.",
+        "url": "/uploads/placeholder-design-system-dealertire.png"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Performance",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "alt": "IMAGE — A Lighthouse-style performance scorecard laid out cleanly. Four circular score badges in a row: Performance 92 / Accessibility 96 / Best Practices 100 / SEO 100. Below the badges, three metric rows with before and after columns. First Contentful Paint: 1.6s → 0.6s. Largest Contentful Paint: 2.7s → 1.2s. Time to Interactive: 4.1s → 1.7s. Each row has a small green down-arrow showing improvement percentage. Clean, factual, no decoration needed.",
+        "url": "/uploads/placeholder-performance-dealertire.png"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Results",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "alt": "IMAGE — A 2x3 grid of bold metric cards on a deep navy background. Each card has a large number, a label, and a small grey benchmark or before/after figure beneath it. Cards: \"+42% Conversion Rate\" (2.8% → 4.0%) / \"↓38% Cart Abandonment\" (68% → 42%) / \"+$2.4M Annual Revenue\" / \"↓45% Session Timeout Incidents\" / \"1,233% First-Year ROI\" / \"4.6/5.0 Dealer Satisfaction\" (up from 3.2). Bold, scannable, impossible to ignore.",
+        "url": "/uploads/placeholder-results-dealertire.png"
+      }
+    },
+    {
+      "type": "list",
+      "content": {
+        "items": [
+          "+42% Conversion Rate",
+          "↓38% Cart Abandonment",
+          "+$2.4M Annual Revenue",
+          "↓45% Session Timeout Incidents",
+          "1,233% First-Year ROI",
+          "4.6/5.0 Dealer Satisfaction"
+        ],
+        "ordered": false
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "What I Learned",
+        "level": 2
+      }
+    },
+    {
+      "type": "list",
+      "content": {
+        "items": [
+          "The session timeout problem had no ticket raised against it — I spotted it in screen research. That's the kind of thing you only find if you actually watch users, not just read analytics reports.",
+          "Cutting form fields from 15 to 9 felt small but it drove the biggest single lift in form completion — up 55%. Simplicity at the field level compounds fast.",
+          "Building the design system with OEM theming from day one meant every new storefront after launch took hours to skin instead of weeks. Collaboration with engineering during system design, not after, made that possible."
+        ],
+        "ordered": false
+      }
+    }
+  ]
+}

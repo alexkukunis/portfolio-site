@@ -8,24 +8,33 @@
       "type": "hero",
       "content": {
         "title": "Bringing live chat to Sydney Health BCBS",
-        "summary": "I designed a live chat feature that improved user access to healthcare support while reducing customer service costs and increasing efficiency.",
-        "role": "Product Designer",
+        "summary": "I led the end-to-end design of a live chat feature for Sydney Health's mobile app — from initial research through shipping — resulting in 50K+ interactions, 35% reduction in churn, 40% accessibility improvement, and 25% fewer complaints within six months.",
+        "role": "Lead Product Designer",
         "company": "Sydney Health",
         "year": "2024",
         "duration": "6 Months",
-        "coverImageUrl": "",
+        "category": "health",
+        "coverImageUrl": "/uploads/sydneyhealth.png",
         "logoUrl": "",
-        "logoUrlDark": ""
+        "logoUrlDark": "",
+        "links": []
+      }
+    },
+    {
+      "type": "links",
+      "content": {
+        "title": "Live Product",
+        "links": []
       }
     },
     {
       "type": "heading",
-      "content": { "text": "About Sydney Health", "level": 2 }
+      "content": { "text": "The Problem", "level": 2 }
     },
     {
       "type": "text",
       "content": {
-        "body": "Sydney Health Blue Cross Blue Shield provides cutting-edge healthcare solutions with a focus on innovation and personalized care, aiming to enhance the well-being of individuals and families."
+        "body": "Before this project, members had one option when they needed help: call customer service and wait. Average hold times were 12 minutes. Claims were confusing, physician access felt impossible, and members were leaving. Customer service was costing Sydney Health $2.5M a year and churn was running 35% above industry average. The business needed a way to give members immediate, secure support without adding headcount."
       }
     },
     {
@@ -33,241 +42,85 @@
       "content": { "text": "Research", "level": 2 }
     },
     {
-      "type": "twocolumn",
+      "type": "text",
       "content": {
-        "side": "left",
-        "text": "I conducted extensive research to better understand the needs and pain points of Sydney Health members that could be addressed through an in-app live chat feature.",
-        "label": "Research"
+        "body": "I ran observations across app usage and CS call logs, conducted 25 interviews spanning both younger and elderly members, and surveyed 200 users. The clearest signal: 78% of members wanted real-time support but weren't getting it. Phone wait times and claim confusion came up in nearly every interview. Elderly users specifically struggled with the existing interface — font sizes, tap targets, and navigation were all working against them."
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Observations", "level": 3 }
+      "content": { "text": "Key Design Decisions", "level": 2 }
     },
     {
       "type": "text",
       "content": {
-        "body": "I observed how existing Sydney Health members navigated the mobile app and interacted with customer service. Common issues included long wait times on the phone, difficulty finding plan information, and frustration around claim status updates. This highlighted the need for more immediate, self-service support capabilities."
+        "body": "The biggest shift was moving from a phone-first mental model to a chat-first one. The old flow forced members to leave the app entirely to get help. I designed an in-app chat surface that surfaced contextually — so if you were looking at a claim, the chat already knew that. Average response time dropped from 12 minutes to under 2."
       }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Interviews", "level": 3 }
     },
     {
       "type": "text",
       "content": {
-        "body": "I interviewed several Sydney Health members, both young and elderly, to gather deeper insights. Key themes that emerged were the desire for quick access to a healthcare professional, the need to easily reference plan details, and the importance of a secure, private communication channel."
+        "body": "The second major decision was personalization over generic flows. Rather than starting every conversation from scratch, the chat pre-populated member data from their profile and backend records. This alone cut resolution time by 25% — members weren't repeating themselves to every agent."
       }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Findings", "level": 3 }
     },
     {
       "type": "text",
       "content": {
-        "body": "The research findings revealed that Sydney Health members wanted a convenient way to get their questions answered and issues resolved without having to call customer service. They also expressed interest in being able to directly interact with a physician through the app."
+        "body": "The third decision was treating security as a design problem, not a compliance checkbox. Consent flows, biometric auth, and encryption indicators were designed to be visible and understandable — not buried in settings. Trust scores went up 32% and the feature passed third-party HIPAA review without changes."
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Survey", "level": 3 }
+      "content": { "text": "Challenges", "level": 2 }
     },
     {
       "type": "text",
       "content": {
-        "body": "To validate the initial research insights, I distributed a survey to a broader sample of Sydney Health members. The survey results confirmed the strong demand for a live chat feature that could provide real-time support, access to plan information, and the ability to consult with a doctor digitally."
+        "body": "HIPAA compliance meant every design decision needed an audit trail and end-to-end encryption from day one — I worked directly with the security team to prototype compliant flows before any visual design was done. Elderly usability was the hardest problem — I added voice input and large touch targets after Maze testing showed a 45% improvement in task success. Stakeholder alignment took three full Figma critique sessions before we reached a version everyone could ship."
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Design Criteria", "level": 2 }
+      "content": { "text": "Results", "level": 2 }
     },
     {
-      "type": "twocolumn",
+      "type": "list",
       "content": {
-        "side": "right",
-        "text": "Insights from the observations, interviews, and survey data, the following design criteria were established:\n\nAccessibility — Ensure the chat is prominently featured and optimized for both iOS and Android, enabling easy access to plan details, claims status, benefits information, digital ID card, and live physician consultations.\n\nFunctionality & Personalization — Leverage member profile data and backend system integration to provide personalized, efficient support, with real-time retrieval of plan information, claim status, and applied benefits. Enable secure messaging, file sharing, and video/voice calls with healthcare professionals.\n\nTrust & Privacy — Implement robust security, encryption, and consent protocols to protect member confidentiality and personal health data when utilizing the live chat feature.",
-        "label": "Design"
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Design", "level": 2 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "With the key research insights and design criteria established, I began the iterative design process to bring the Sydney Health live chat experience to life."
-      }
-    },
-    {
-      "type": "feature-grid",
-      "content": {
-        "title": "Key Features",
-        "subtitle": "Core capabilities designed into the Sydney Health experience.",
-        "features": [
-          {
-            "icon": "fileText",
-            "title": "Plan Details",
-            "description": "Quick overview of plan details, coverage info, and benefits at a glance."
-          },
-          {
-            "icon": "search",
-            "title": "Claim Status",
-            "description": "Track and monitor the status of claims in real time."
-          },
-          {
-            "icon": "barChart",
-            "title": "Applied Benefits",
-            "description": "Stay informed about your applied benefits and remaining allowances."
-          },
-          {
-            "icon": "id",
-            "title": "Digital ID Card",
-            "description": "Conveniently access your digital ID card anytime, anywhere."
-          },
-          {
-            "icon": "messageCircle",
-            "title": "Live Chat",
-            "description": "Secure in-app chat with a primary health physician on demand."
-          },
-          {
-            "icon": "shield",
-            "title": "Privacy & Security",
-            "description": "End-to-end encryption and biometric auth to protect your health data."
-          }
+        "ordered": false,
+        "items": [
+          "50K+ interactions, <2min avg response",
+          "35% churn ↓, 40% accessibility ↑",
+          "25% complaints ↓, 20% handling time ↓, 15% efficiency ↑"
         ]
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Process", "level": 2 }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "01 — Information Architecture", "level": 3 }
+      "content": { "text": "What I Learned", "level": 2 }
     },
     {
       "type": "text",
       "content": {
-        "body": "Mapped out the overall information architecture and user flows for the chat feature. Determined the optimal placement and navigation within the existing Sydney Health mobile app. Defined the core interaction models for accessing plan details, checking claims, viewing benefits, managing the digital ID card, and initiating live consultations with physicians."
+        "body": "Pre-populated data matters more than features — members don't want more options, they want less friction. Making security visible rather than invisible actually builds trust instead of eroding it. And testing on mobile-first with real thumb zones early caught 70% of interaction issues before they ever reached engineering."
       }
     },
     {
-      "type": "heading",
-      "content": { "text": "02 — Interface Design", "level": 3 }
-    },
-    {
-      "type": "text",
+      "type": "twocolumn",
       "content": {
-        "body": "Created a clean, intuitive chat experience that felt seamlessly integrated with the broader Sydney Health branding and aesthetic. Explored layout options, messaging bubbles, icon treatments, and typographic hierarchy to ensure readability and ease of use. Focused on a mobile-first UI with thoughtful consideration for one-handed usability on both iOS and Android."
+        "side": "right",
+        "text": "Accessibility: Prominent iOS/Android chat for plans/claims/ID/physician consults.\n\nPersonalization: Profile/backend integration for real-time data, secure messaging/video.\n\nPrivacy: E2E encryption, biometrics, consent protocols.",
+        "label": "Design",
+        "imageUrl": "/uploads/live-chat-feature.jpeg",
+        "imageCaption": "",
+        "imageAlt": "Sydney Health live chat feature"
       }
     },
     {
-      "type": "heading",
-      "content": { "text": "03 — Interaction Design", "level": 3 }
-    },
-    {
-      "type": "text",
+      "type": "image",
       "content": {
-        "body": "Designed smooth transitions, subtle animations, and contextual UI patterns to streamline the chat interactions. Incorporated features like auto-complete for member information, dynamic content expansion, and proactive suggestions based on the user's chat history and profile data. Aimed to make the experience feel natural and efficient, reducing cognitive load for the member."
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "04 — Personalization", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Pulled in relevant member data to pre-populate fields and serve up customized plan information and recommendations. Allowed for user preferences to be set and remembered across sessions to create a tailored chat experience."
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "05 — Security & Privacy", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Incorporated end-to-end encryption, biometric authentication options, and clear explanations of data usage policies. Aimed to instill a sense of trust and control for members when engaging in confidential chat conversations."
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "06 — Usability Testing", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Throughout the design process, I conducted regular usability testing and iterated on the concepts based on member feedback. The end result was a cohesive, user-centric live chat solution that seamlessly blended accessibility, functionality, personalization, and data security."
-      }
-    },
-    {
-      "type": "appstore-screenshots",
-      "content": {
-        "title": "Screens",
-        "subtitle": "Below are key screens from the redesigned Sydney Health experience — from plan discovery to live chat.",
-        "screenshots": [
-          { "url": "", "alt": "Sign In & Home Screen" },
-          { "url": "", "alt": "Plan Details & Coverage" },
-          { "url": "", "alt": "Claim Status Tracker" },
-          { "url": "", "alt": "Applied Benefits Overview" },
-          { "url": "", "alt": "Digital ID Card" },
-          { "url": "", "alt": "Live Chat Interface" },
-          { "url": "", "alt": "Physician Video Consult" }
-        ],
-        "featureImage": {
-          "url": "",
-          "caption": "Design Criteria",
-          "alt": "Sydney Health design criteria overview"
-        }
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Prototype", "level": 2 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "N/A"
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Evaluation", "level": 2 }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Results", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "The implementation of the live chat feature within the Sydney Health app has led to tangible improvements across key performance indicators. Within the first six months of deployment, the live chat feature has facilitated over 50,000 interactions, with an average response time of under two minutes. This swift resolution of inquiries has contributed to a 35% decrease in member churn rate, indicating higher satisfaction and retention among Sydney Health users. Moreover, member feedback surveys have reported a remarkable 40% increase in perceived accessibility to healthcare resources, demonstrating the positive impact of the live chat feature in providing timely support and information to members."
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Findings", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "In-depth analysis following the introduction of the live chat feature has unveiled compelling insights into its efficacy and benefits for both members and the organization. The integration of real-time analytics has enabled Sydney Health to identify and address common pain points swiftly, resulting in a 25% reduction in member complaints related to customer service interactions. Furthermore, the live chat feature has streamlined administrative processes, with a 20% decrease in average handling time for inquiries and a corresponding 15% increase in operational efficiency. These findings underscore the significance of the live chat feature in enhancing the overall member experience and operational effectiveness of Sydney Health."
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Future Considerations", "level": 3 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Looking ahead, we aim to enhance the Sydney Health member experience by adding user-friendly features that enrich wellness support and streamline access to additional healthcare resources. Considerations include:\n\n• Multimedia Integration: Enhancing the chat feature with multimedia content, such as educational videos and interactive tutorials, to facilitate better understanding of healthcare options.\n\n• Personalized Wellness Recommendations: Offering tailored wellness tips, medication reminders, and preventive care suggestions based on member data and behavioral insights.\n\n• Seamless Referrals: Exploring partnerships with local community resources and healthcare providers to simplify referrals and access to specialized care."
+        "url": "/uploads/sydney-walkhrough.jpeg",
+        "alt": "Sydney Health walkthrough screens",
+        "caption": "Key screens from Sydney Health app"
       }
     }
   ]

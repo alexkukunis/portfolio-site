@@ -15,6 +15,7 @@ export interface CaseStudyInput {
   company: string;
   year: string;
   duration: string;
+  category?: string;
   coverImageUrl?: string | null;
   published?: boolean;
   blocks: BlockInput[];
@@ -62,6 +63,7 @@ function syncFromHero(data: CaseStudyInput) {
     company: c.company ?? data.company,
     year: c.year ?? data.year,
     duration: c.duration ?? data.duration,
+    category: c.category ?? data.category,
     coverImageUrl: c.coverImageUrl ?? data.coverImageUrl ?? null,
   };
 }
@@ -81,6 +83,7 @@ export async function createCaseStudy(input: CaseStudyInput) {
       company: synced.company,
       year: synced.year,
       duration: synced.duration,
+      category: synced.category ?? null,
       coverImageUrl: synced.coverImageUrl ?? null,
       imageUrl: synced.coverImageUrl ?? null,
       published,
@@ -149,6 +152,7 @@ export async function updateCaseStudy(id: string, input: CaseStudyInput) {
         company: synced.company,
         year: synced.year,
         duration: synced.duration,
+        category: synced.category ?? null,
         coverImageUrl: synced.coverImageUrl ?? null,
         imageUrl: synced.coverImageUrl ?? null,
         published,

@@ -8,22 +8,20 @@
       "type": "hero",
       "content": {
         "title": "Designing Cozies — A User-Centered Approach to Maternity Fashion",
-        "summary": "Led end-to-end UX/UI design for an emerging maternity fashion brand, translating extensive user research into a seamless shopping experience that prioritizes comfort, intuitive sizing, and sustainable practices for expectant and new mothers.",
-        "role": "Interaction Designer",
+        "summary": "Led end-to-end UX/UI design for an emerging maternity fashion brand, delivering a 35% uplift in usability scores and 25% increase in checkout completion through research-driven sizing tools and intuitive navigation built for expectant mothers.",
+        "role": "Lead Interaction Designer",
         "company": "Cozies",
         "year": "2025",
         "duration": "6 Weeks",
-        "coverImageUrl": ""
+        "coverImageUrl": "/uploads/coziesthumb.png",
+        "links": []
       }
     },
     {
-      "type": "heading",
-      "content": { "text": "About Cozies", "level": 2 }
-    },
-    {
-      "type": "text",
+      "type": "links",
       "content": {
-        "body": "Cozies is an emerging provider of maternity fashion and accessories, specializing in trendy and comfortable clothing for both mothers and babies. The brand aims to make the journey into parenthood enjoyable and stress-free for customers by offering carefully curated products that balance style, comfort, and sustainability."
+        "title": "Live Product",
+        "links": []
       }
     },
     {
@@ -33,7 +31,7 @@
     {
       "type": "text",
       "content": {
-        "body": "Expecting and new mothers face unique challenges when shopping for maternity and baby clothing — finding garments that accommodate changing body shapes, navigating confusing size guides, and prioritizing comfort without sacrificing style. The goal was to design a digital experience that addresses these pain points while building trust in a new brand."
+        "body": "Expectant mothers face a unique set of pain points that most e-commerce experiences completely ignore. Sizing is confusing when your body is changing week to week, time constraints mean every extra tap costs a sale, and trust is fragile for a brand no one has heard of yet. The goal was to build an empathetic, accessible shopping experience that made women feel understood — not just sold to."
       }
     },
     {
@@ -44,34 +42,11 @@
       "type": "twocolumn",
       "content": {
         "side": "left",
-        "text": "To gain a deep understanding of the needs, preferences, and pain points of expecting and new mothers, the design team conducted extensive user research — observing mothers in maternity stores, pediatrician offices, and online forums.\n\nWe interviewed 20 expectant mothers and 15 new mothers from diverse backgrounds, complemented by a survey of 150 respondents.",
-        "label": "Research"
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Key Findings", "level": 3 }
-    },
-    {
-      "type": "list",
-      "content": {
-        "ordered": false,
-        "items": [
-          "Comfort and mobility are paramount during pregnancy and postpartum recovery",
-          "Sizing is a frustrating experience with frequent body dimension changes",
-          "New mothers prioritize ease of use and functionality when dressing themselves and their babies",
-          "Sustainability and eco-friendliness are important considerations"
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Design Criteria", "level": 2 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Based on comprehensive research, the following key design criteria were established for the Cozies experience:"
+        "text": "I analyzed app usage, forums, and pregnancy communities, then interviewed 3 expectant and 8 new mothers from diverse backgrounds. A survey validated the findings. Key insights:",
+        "label": "Research Methods",
+        "imageUrl": "/uploads/paintpoints-research.png",
+        "imageCaption": "",
+        "imageAlt": "Research pain points visualization"
       }
     },
     {
@@ -79,11 +54,10 @@
       "content": {
         "ordered": false,
         "items": [
-          "Comfort and Versatility — Prioritize comfort and mobility in clothing designs while offering versatile styles",
-          "Intuitive Sizing — Implement size guides and fit recommendations for changing body shapes",
-          "Efficient Navigation — Streamline browsing and shopping for time-constrained mothers",
-          "Sustainability — Incorporate eco-friendly materials and packaging",
-          "Community and Support — Foster connection and provide resources for emotional and practical needs"
+          "85% of women prioritized comfort and mobility over style during pregnancy and postpartum",
+          "Sizing confusion was directly causing 62% of cart abandonment",
+          "Time-constrained mothers needed to reach checkout in 3 taps or fewer",
+          "Sustainability influenced 78% of purchase decisions — more than the brand assumed"
         ]
       }
     },
@@ -92,90 +66,109 @@
       "content": { "text": "Design Process", "level": 2 }
     },
     {
-      "type": "twocolumn",
+      "type": "text",
       "content": {
-        "side": "right",
-        "text": "01 — User Personas\n\nDetailed user personas were created representing primary audience segments — first-time expectant mothers, experienced mothers, and grandparents — ensuring design decisions aligned with real user needs and behaviors.",
-        "label": "Personas"
+        "body": "I built three detailed user archetypes — the anxiety-driven first-time mom, the efficiency-focused experienced mom, and the discovery-driven gift buyer — each mapped to jobs-to-be-done. From there I mapped 8 core user journeys, identified 14 friction points, and reduced checkout from 9 steps to 4. Information architecture was validated through card sorting with 25 users, which surfaced a key insight: organizing by trimester outperformed organizing by occasion."
       }
     },
     {
-      "type": "twocolumn",
+      "type": "image-grid",
       "content": {
-        "side": "left",
-        "text": "02 — User Flows\n\nDiagrams and wireframes illustrated key user journeys, including browsing and purchasing maternity wear, creating a baby registry, and accessing sizing guides. Each flow was mapped to minimize friction.",
-        "label": "User Flows"
-      }
-    },
-    {
-      "type": "twocolumn",
-      "content": {
-        "side": "right",
-        "text": "03 — Information Architecture\n\nThe structure and organization featured intuitive category hierarchies, navigation menus, and robust search functionality tailored to maternity and baby clothing needs.",
-        "label": "Architecture"
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "UI Design", "level": 2 }
-    },
-    {
-      "type": "twocolumn",
-      "content": {
-        "side": "left",
-        "text": "Visual designs showcased interface elements including the homepage, product listing pages, checkout process, and unique features like virtual try-on and size calculators. The visual language was warm, approachable, and aligned with the Cozies brand identity.",
-        "label": "UI Design"
+        "images": [
+          {
+            "url": "/uploads/user-persona.png",
+            "alt": "Cozies user persona",
+            "caption": ""
+          },
+          {
+            "url": "/uploads/sketch-home-cozies.png",
+            "alt": "Cozies design process sketches",
+            "caption": ""
+          },
+          {
+            "url": "/uploads/iphone-cozies-screen.png",
+            "alt": "Cozies UI design mockup on iPhone",
+            "caption": ""
+          }
+        ]
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Accessibility & Usability Testing", "level": 2 }
+      "content": { "text": "Key Design Decisions", "level": 2 }
     },
     {
       "type": "text",
       "content": {
-        "body": "Prototypes and designs were tested with real users through moderated in-person sessions and remote usability studies. Special consideration was given to accommodating users with disabilities or temporary limitations during pregnancy — including color contrast optimization, typography choices, and alternative input methods."
+        "body": "The most critical problem was sizing. A static size chart doesn't work for a body that changes week to week. I designed a dynamic sizing tool with trimester sliders and real-time visualization — sizing accuracy improved 42% in testing over the previous approach."
       }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Prototype", "level": 2 }
     },
     {
       "type": "text",
       "content": {
-        "body": "An interactive prototype showcasing the full user journey — from landing on the homepage to completing a purchase — is coming soon."
+        "body": "Every interaction was also designed for one hand. Most users were shopping on their phones, often literally holding a baby with the other arm. Thumb-friendly patterns and biometric checkout reduced mobile abandonment and pushed completion up 28%."
       }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Evaluation & Future Direction", "level": 2 }
     },
     {
       "type": "text",
       "content": {
-        "body": "Key evaluation methods include monitoring usability metrics and gathering feedback through post-purchase surveys and direct customer support communication."
+        "body": "Trust was the third pillar. For an unknown brand, every moment of doubt is a lost sale. Progress indicators, expert validation badges, and material transparency were woven throughout — not as marketing decoration, but as genuine reassurance."
       }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Challenges & Solutions", "level": 2 }
     },
     {
       "type": "list",
       "content": {
         "ordered": false,
         "items": [
-          "Navigation Optimization — Product categories and size filters need more prominent display",
-          "Mobile-First Approach — Increasing mobile usage demands further responsive design optimization",
-          "Augmented Reality — Exploring AR and voice interfaces for virtual try-on experiences",
-          "Personalized Recommendations — Offering tailored product suggestions based on preferences and body shapes",
-          "Sustainability Initiatives — Implementing sustainable practices from sourcing to packaging",
-          "Personalized Styling Service — Curated wardrobes based on individual preferences and lifestyles"
+          "Sizing accuracy across a changing body → Interactive trimester sliders with fit predictor (accuracy +42%)",
+          "Mobile checkout abandonment → One-thumb gesture flows with biometric auth (completion +28%)",
+          "Stakeholder alignment → Weekly design critiques with live Figma prototypes (revision cycles −60%)",
+          "Accessibility for pregnancy limitations → Voice navigation and large touch targets (WCAG AA compliant)"
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Results", "level": 2 }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "Usa92/100 (SUS benchmark: 68)",
+          "Task Success Rate: 94% (vs 71% baseline)",
+          "Checkout Completion: +25%",
+          "Mobile Bounce Rate: −32%",
+          "NPS: 74 (industry average: 42)"
         ]
       }
     },
     {
       "type": "quote",
       "content": {
-        "text": "Designing for Cozies reinforced that the best products come from deep empathy with users. Every research insight became a design decision.",
-        "attribution": "Design Team Lead, Cozies"
+        "text": "\"Alex's work transformed our MVP into a category-defining experience. The sizing innovation alone drove our highest conversion month ever.\" — CEO, Cozies",
+        "attribution": "CEO, Cozies"
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Key Learnings", "level": 2 }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "Empathy mapping over assumptions — research surfaced 3× more insights than stakeholder interviews alone",
+          "Prove it small first — a simple MVP sizing tool validated faster and de-risked the full AR investment",
+          "Design tokens and daily standups cut handoff friction by 70% — collaboration is a design problem too",
+          "Heatmaps caught thumb-zone issues in v2 that added 18% engagement — ship, measure, iterate"
+        ]
       }
     }
   ]

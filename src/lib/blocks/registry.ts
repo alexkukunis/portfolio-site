@@ -13,6 +13,8 @@ import { appStoreScreenshotsDefault, appStoreScreenshotsMeta, RenderAppStoreScre
 import { AppStoreScreenshotsEditor } from './components/AppStoreScreenshotsEditor';
 
 import { featureGridDefault, featureGridMeta, RenderFeatureGrid } from './components/FeatureGridBlock';
+import { ImageGridEditor, RenderImageGrid, imageGridDefault, imageGridMeta } from './components/ImageGridBlock';
+import { linksDefault, linksMeta, RenderLinks } from './components/LinksBlock';
 
 export interface BlockDefinition<T extends BlockType> {
   type: T;
@@ -97,6 +99,20 @@ export const blockRegistry: Registry = {
     Editor: () => null,
     Render: RenderFeatureGrid,
     schema: blockSchemas['feature-grid'],
+  },
+  'image-grid': {
+    ...imageGridMeta,
+    defaultContent: imageGridDefault,
+    Editor: ImageGridEditor,
+    Render: RenderImageGrid,
+    schema: blockSchemas['image-grid'],
+  },
+  links: {
+    ...linksMeta,
+    defaultContent: linksDefault,
+    Editor: () => null,
+    Render: RenderLinks,
+    schema: blockSchemas.links,
   },
 };
 

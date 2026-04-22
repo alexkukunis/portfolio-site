@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "slug": "stmble-dating-app",
+    "published": true
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "content": {
+        "title": "Stmble: Revolutionizing Dating Discovery",
+        "summary": "Redesigned matching UI/UX for 3x engagement, privacy-first swiping, and AI-powered icebreakers in a crowded market.",
+        "role": "Lead Product Designer",
+        "company": "Stmble",
+        "year": "2026",
+        "duration": "12 Weeks",
+        "category": "social",
+        "coverImageUrl": "/uploads/placeholder-hero-stmble.png"
+      }
+    }
+  ]
+}

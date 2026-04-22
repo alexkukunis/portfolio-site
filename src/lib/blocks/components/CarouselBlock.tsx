@@ -2,6 +2,7 @@
 
 import type { EditorProps, RenderProps } from '../types';
 import { Field, TextInput, ImagePlaceholder } from './shared';
+import { ImageModal } from './ImageModal';
 import { useState } from 'react';
 
 export const carouselMeta = {
@@ -28,14 +29,24 @@ export const carouselDefault: CarouselContent = {
   ],
 };
 
-function CarouselImage({ slide }: { slide: CarouselSlide }) {
+function CarouselImage({ slide, onZoom }: { slide: CarouselSlide; onZoom?: () => void }) {
   if (slide.url) {
     return (
-      <img
-        src={slide.url}
-        alt={slide.alt}
-        className="h-full w-auto mx-auto rounded-xl object-contain"
-      />
+      <div className="relative group cursor-pointer" onClick={onZoom}>
+        <img
+          src={slide.url}
+          alt={slide.alt}
+          className="h-full w-auto mx-auto rounded-xl object-contain group-hover:scale-[1.02] transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center rounded-xl">
+          <svg className="w-10 h-10 text-white/80 group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </div>
+      </div>
     );
   }
   return (
@@ -116,6 +127,9 @@ export function RenderCarousel({ content }: RenderProps<'carousel'>) {
   const slides = Array.isArray(content.slides) ? content.slides : [];
   const valid = slides.filter(Boolean);
   const [active, setActive] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState('');
+  const [currentAlt, setCurrentAlt] = useState('');
 
   if (valid.length === 0) return null;
 
@@ -135,9 +149,10 @@ export function RenderCarousel({ content }: RenderProps<'carousel'>) {
                   pointerEvents: i === active ? 'auto' : 'none',
                 }}
               >
-                <CarouselImage slide={slide} />
+                <CarouselImage slide={slide} onZoom={() => { setModalOpen(true); setCurrentImage(slide.url); setCurrentAlt(slide.alt); }} />
               </div>
             ))}
+            <ImageModal isOpen={modalOpen} onClose={() => setModalOpen(false)} imageUrl={currentImage} alt={currentAlt} />
           </div>
         </div>
       </div>

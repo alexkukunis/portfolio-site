@@ -13,9 +13,18 @@
         "company": "FoodWell",
         "year": "2025",
         "duration": "8 Weeks",
-        "coverImageUrl": "",
+        "category": "retail",
+        "coverImageUrl": "/uploads/foodwell-thumb.jpg",
         "logoUrl": "",
-        "logoUrlDark": ""
+        "logoUrlDark": "",
+        "links": []
+      }
+    },
+    {
+      "type": "links",
+      "content": {
+        "title": "Live Product",
+        "links": []
       }
     },
     {
@@ -82,7 +91,10 @@
       "content": {
         "side": "right",
         "text": "For FoodWell's digital experience, the primary focus was on creating a streamlined and intuitive ordering process. Thorough user testing was conducted to understand pain points in the existing workflow, and the interface was redesigned to minimize steps and maximize user efficiency.\n\nStrategically placed call-to-action buttons ensured that users could navigate from selecting meal plans to completing orders seamlessly.",
-        "label": "Design"
+        "label": "Design",
+        "imageUrl": "/uploads/food-well-mobileview-update.png",
+        "imageCaption": "",
+        "imageAlt": "FoodWell redesigned ordering screens"
       }
     },
     {
@@ -119,9 +131,8 @@
       "type": "carousel",
       "content": {
         "slides": [
-          { "url": "", "alt": "Meal Discovery" },
-          { "url": "", "alt": "Meal Details" },
-          { "url": "", "alt": "Checkout" }
+          { "url": "/uploads/home_mobile_foodwell_optimized.png", "alt": "FoodWell home mobile view" },
+          { "url": "/uploads/foodwell-plans_optimized.png", "alt": "FoodWell meal plans screen" }
         ]
       }
     },

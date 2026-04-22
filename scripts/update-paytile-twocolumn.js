@@ -1,0 +1,25 @@
+const { PrismaClient } = require('@prisma/client');
+const { Pool } = require('pg');
+const { PrismaPg } = require('@prisma/adapter-pg');
+
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const adapter = new PrismaPg(pool);
+const prisma = new PrismaClient({ adapter });
+
+async function updateBlock() {
+  await prisma.caseStudyBlock.update({
+    where: { id: 'cmo929t3h000ciaq1hgiwor8l' },
+    data: {
+      content: {
+        side: 'left',
+        text: 'User Engagement Strategy\n\nWith the research synthesized, we mapped where existing payment apps were losing users and identified three areas to design into. First, streamlining interaction flows to reduce friction at every decision point. Second, introducing gamification and reward mechanics to drive retention beyond the first transaction. Third, polishing the UI to encourage exploration — the map was a canvas, not just a utility, and the design needed to reflect that.',
+        label: 'User Engagement Strategy',
+        imageUrl: '/uploads/Screen-Shot-2022-10-24-at-2.18.52-PM-1.png',
+        imageAlt: 'User engagement analysis chart showing identified improvement areas and strategy'
+      }
+    }
+  });
+  console.log('Updated Paytile two-column block: text left, image right.');
+}
+
+updateBlock().catch(e => { console.error(e); process.exit(1); }).finally(async () => { await prisma.$disconnect(); await pool.end(); });
