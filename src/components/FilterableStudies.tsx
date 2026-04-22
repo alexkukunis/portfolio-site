@@ -53,7 +53,7 @@ export default function FilterableStudies({ studies, lockedSlugs }: FilterableSt
           );
         })}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="space-y-8">
         {filteredStudies.map((study) => {
           const isLocked = lockedSlugs.includes(study.slug);
           return (
@@ -62,6 +62,7 @@ export default function FilterableStudies({ studies, lockedSlugs }: FilterableSt
               study={study}
               href={`/case-studies/${study.slug}`}
               isLocked={isLocked}
+              className="w-full"
             />
           );
         })}
