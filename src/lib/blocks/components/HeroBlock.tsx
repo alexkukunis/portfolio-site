@@ -181,6 +181,18 @@ function LinkIcon({ icon, className }: { icon?: string; className?: string }) {
         <polygon points="10,8 16,12 10,16"/>
       </svg>
     ),
+    apple: (
+      <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="M10 10l3 3 3-3"/>
+      </svg>
+    ),
+    'android-logo': (
+      <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <polygon points="10,8 16,12 10,16"/>
+      </svg>
+    ),
   };
 
   return icons[icon] ?? icons.external_link;
