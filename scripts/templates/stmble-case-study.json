@@ -30,6 +30,14 @@
       }
     },
     {
+      "type": "image",
+      "content": {
+        "url": "/uploads/stmble-overview.png",
+        "alt": "Overview of Stmble design challenge",
+        "caption": "Overview of the Stmble design challenge."
+      }
+    },
+    {
       "type": "heading",
       "content": {
         "text": "The Design Challenge",
@@ -52,7 +60,7 @@
     {
       "type": "image",
       "content": {
-        "url": "/uploads/stmble-onboarding-screens.png",
+        "url": "/uploads/stmble-onboarding.png",
         "alt": "Three iPhone screens in a row showing the onboarding flow",
         "caption": "Three iPhone screens in a row showing the onboarding flow."
       }

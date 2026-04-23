@@ -48,7 +48,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
   const isDraft = !study.published && isAdmin;
 
-  const lockedSlugs = ['dealer-tire-storefront-redesign', 'paytile-location-payments'];
+  const lockedSlugs = ['dealer-tire-storefront-redesign', 'paytile-location-payments', 'stmble-dating-app'];
   const pwCookie = cookieStore.get(`pw_${study.slug}`)?.value;
   if (lockedSlugs.includes(study.slug) && pwCookie !== 'alex2026') {
     redirect(`/case-studies?unlock=${study.slug}`);
