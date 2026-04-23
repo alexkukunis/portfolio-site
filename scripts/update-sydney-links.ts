@@ -31,7 +31,7 @@ async function updateSydneyLinks() {
     { label: 'Android App', url: 'https://play.google.com/store/apps/details?id=com.anthem.sydney&hl=en_US', icon: 'android' }
   ];
 
-  const currentContent = heroBlock.content as Record&lt;string, any&gt;;
+  const currentContent = heroBlock.content as Record<string, unknown>;
   const updatedHeroContent = {
     ...currentContent,
     links: newLinks
@@ -46,4 +46,4 @@ async function updateSydneyLinks() {
   console.log('Links:', JSON.stringify(newLinks, null, 2));
 }
 
-updateSydneyLinks().catch(e => { console.error(e); process.exit(1); }).finally(async () => { await prisma.$disconnect(); await pool.end(); });
+void updateSydneyLinks().catch(e => { console.error(e); process.exit(1); }).finally(async () => { await prisma.$disconnect(); await pool.end(); });
