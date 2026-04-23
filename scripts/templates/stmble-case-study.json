@@ -7,14 +7,204 @@
     {
       "type": "hero",
       "content": {
-        "title": "Stmble: Revolutionizing Dating Discovery",
-        "summary": "Redesigned matching UI/UX for 3x engagement, privacy-first swiping, and AI-powered icebreakers in a crowded market.",
+        "title": "Stmble",
+        "summary": "Stmble is a location-based iOS dating app I designed and shipped end to end — from initial concept through to App Store launch. Built in React Native. The core experience is real-time, proximity-driven, and time-pressured. Every design decision was made around those three constraints. This wasn't a concept project. It's live.",
         "role": "Lead Product Designer",
         "company": "Stmble",
         "year": "2026",
-        "duration": "12 Weeks",
+        "duration": "End-to-end",
         "category": "social",
-        "coverImageUrl": "/uploads/stmble-thumb.png"
+        "coverImageUrl": "/uploads/stmble-thumb.png",
+        "links": [
+          {
+            "label": "Website",
+            "url": "https://stmble.co",
+            "icon": "globe"
+          },
+          {
+            "label": "iOS App",
+            "url": "https://apps.apple.com/us/app/stmble/id6757424289",
+            "icon": "external-link"
+          }
+        ]
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "The Design Challenge",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Most dating apps are asynchronous — you swipe, you wait, matches trickle in. Stmble is the opposite. The experience is live, location-aware, and time-constrained. Designing for real-time interaction on mobile meant rethinking every pattern the category had normalised. There was no existing playbook to follow.\n\nThree problems to solve from day one — how do you communicate urgency without anxiety, how do you show presence and proximity without exposing sensitive location data, and how do you make a 60-second decision feel considered rather than pressured."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Onboarding",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/stmble-onboarding-screens.png",
+        "alt": "Three iPhone screens in a row showing the onboarding flow",
+        "caption": "Three iPhone screens in a row showing the onboarding flow."
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Screen 1 — Dark background, the Stmble wordmark centred, a single line of subtext beneath it, and one button: \"Get Started.\" Nothing else. Sets the tone — minimal, confident, different.\n\nScreen 2 — Location Permission: A clean permission prompt screen. Custom illustrated graphic above the system prompt — warm and approachable, not the default iOS dialogue cold. Short copy explaining why location is needed, framed around the experience not the data.\n\nScreen 3 — Profile Setup: First name, age, one photo upload. Three fields. Nothing more asked at this stage. Gets users to the experience as fast as possible — complexity comes after they've felt the product.\n\nOnboarding was deliberately stripped back. The experience itself is the pitch — the faster someone gets into a live moment, the faster they understand what Stmble is."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "The Core Experience",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/stmble-core-experience.png",
+        "alt": "Two iPhone screens side by side",
+        "caption": "Two iPhone screens side by side."
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Left screen — Entering a location: A clean search/entry interface. A map view beneath showing a soft radius around the entered location. A single CTA at the bottom: \"Stumble Here.\" The map doesn't show other users — just the place and the radius. Privacy-first visual.\n\nRight screen — Active match moment: A profile card fills the screen — photo, first name, age. At the top a circular countdown timer, bold and visible, showing seconds remaining. Two buttons anchored to the bottom — a large filled \"Accept\" on the right, a lighter outlined \"Not Right Now\" on the left. The timer creates urgency. The asymmetric button weight creates a clear primary action without forcing it."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "The 60-Second Timer — The Hardest Design Problem",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/stmble-timer-states.png",
+        "alt": "Four iPhone screens in a row showing the timer states",
+        "caption": "Four iPhone screens in a row showing the timer states."
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Screen 1 — Full: Timer at 60 seconds, circular progress ring complete, neutral colour. Calm.\n\nScreen 2 — Mid: Timer at 30 seconds, ring half elapsed, colour shifts to warm amber. Gentle urgency.\n\nScreen 3 — Low: Timer at 10 seconds, ring nearly gone, colour shifts to a soft red. Clear pressure without alarm.\n\nScreen 4 — Expired: Timer gently fades, a gentle message appears: \"This moment has passed.\" No harsh state, no failure language. The moment simply closes.\n\nThe timer was the most iterated component in the entire app. Too prominent and it creates anxiety — users make worse decisions under stress. Too subtle and the real-time mechanic loses meaning. The solution was a circular progress ring that changes colour gradually across three states — neutral to amber to soft red — without ever flashing or alarming. The language at expiry was equally considered. \"This moment has passed\" feels true to the product ethos rather than a system error."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Interaction States",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/stmble-interaction-states.png",
+        "alt": "A screen showing the profile card component in three states side by side",
+        "caption": "A screen showing the profile card component in three states side by side."
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "State 1 — Default: Profile card centred, timer running, both buttons visible and equal weight.\n\nState 2 — Accepting: The accept button pulses briefly, card lifts slightly with a subtle shadow, a soft confirmation animation begins. Feels like a moment, not a tap.\n\nState 3 — Passing: Card slides away to the left, no harsh dismiss animation, \"Not right now\" — the language is soft and non-rejecting deliberately. Nobody is rejected in Stmble. Timing just doesn't align."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Design System",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/stmble-design-system.png",
+        "alt": "Component sheet on a dark background matching the app's visual language",
+        "caption": "Component sheet on a dark background matching the app's visual language."
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Top row: the countdown timer component in all four states — full, mid, low, expired. Second row: profile card variants — standard, mutual accept state, expired state. Third row: button components — accept primary, pass secondary, loading state, disabled state. Fourth row: typography and colour tokens — the warm dark palette, accent colours for timer states, type scale. Feels like a considered system not a collection of one-off screens."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Shipped — App Store",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/stmble-app-store.png",
+        "alt": "App Store listing mockup",
+        "caption": "App Store listing mockup."
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Stmble icon — clean, distinctive. Preview screenshots in the App Store carousel showing the core experience screens. Star rating visible. \"Available on the App Store\" badge. This image exists purely to show it's real and live — not a concept."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "React Native Implementation",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Working in React Native meant designing with implementation in mind from the start. Component architecture, animation constraints, and real-time state management all shaped design decisions directly. The timer component, the card interaction, and the location radius visual were all designed with the developer build in parallel — not handed off after the fact. This is what end-to-end ownership actually looks like."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Results",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "The app launched on the App Store. The core real-time interaction loop — enter a place, see a profile, decide in 60 seconds — tested with strong engagement metrics in early user sessions. Average session length exceeded comparable dating apps in the same cohort. The mechanic works because the design makes the urgency feel like possibility rather than pressure."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "What I Learned",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Designing for real-time is a different discipline entirely. Every state has to be considered — active, waiting, expiring, expired, matched, passed — and each transition between them has to feel intentional. Static screens are only half the work.\n\nLanguage is a design material. \"Not right now\" instead of \"Pass.\" \"This moment has passed\" instead of \"Expired.\" Every word in a time-pressured experience carries emotional weight.\n\nShipping to the App Store with real platform constraints — performance, animation budgets, iOS human interface guidelines — makes you a better designer. Knowing what's easy to build and what's expensive changes how you design."
       }
     }
   ]
