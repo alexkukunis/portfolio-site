@@ -80,13 +80,13 @@ function ImagePlaceholder({ label, index }: { label: string; index: number }) {
 
 function RealImage({ imageUrl, imageAlt, label, onZoom }: { imageUrl: string; imageAlt?: string; label: string; onZoom: () => void }) {
   const isTall = label.includes('One-Handed') || imageUrl.includes('one-handed');
-  const aspectClass = isTall ? 'aspect-[4/5] md:aspect-[3/4]' : 'aspect-[4/3]';
+  const aspectClass = isTall ? 'aspect-[4/5] md:aspect-[3/4]' : 'aspect-video';
   return (
     <div className={`w-full ${aspectClass} rounded-2xl border border-border/50 overflow-hidden group relative cursor-pointer`} onClick={onZoom}>
       <img
         src={imageUrl}
         alt={imageAlt || label}
-        className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500 brightness-105 contrast-110"  // Slight enhancement to reduce perceived cut-out
+        className="w-full h-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
         loading="lazy"
       />
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">

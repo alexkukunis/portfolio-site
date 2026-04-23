@@ -13,7 +13,7 @@ async function main() {
   const adapter = new PrismaPg(pool);
   const prisma = new PrismaClient({ adapter });
 
-  const templatePath = join(__dirname, 'templates/sydney-health-case-study.json');
+  const templatePath = join(__dirname, 'templates/sydney-health-updated.json');
   const raw = readFileSync(templatePath, 'utf8');
   const template = JSON.parse(raw);
 

@@ -43,7 +43,7 @@ function getGradient(index: number) {
 
 function ImagePlaceholder({ alt }: { alt: string }) {
   return (
-    <div className="w-full aspect-[4/3] rounded-2xl border-2 border-dashed border-border/50 bg-gradient-to-br from-muted/20 to-accent/10 flex items-center justify-center">
+    <div className="w-full aspect-video rounded-2xl border-2 border-dashed border-border/50 bg-gradient-to-br from-muted/20 to-accent/10 flex items-center justify-center">
       <div className="text-center text-xs text-muted-foreground p-4">
         <svg className="w-8 h-8 mx-auto mb-2 text-muted-foreground" fill="none" viewBox="0 0 24 24">
           <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
@@ -71,7 +71,7 @@ function RealImage({
         <img
           src={url}
           alt={alt}
-          className="w-full h-full object-cover object-left group-hover:scale-[1.02] transition-transform duration-500"
+          className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">

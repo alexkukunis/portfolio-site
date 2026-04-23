@@ -30,7 +30,7 @@ export function ImageRender({ content }: RenderProps<'image'>) {
   return (
     <figure className="my-8 space-y-3">
       {content.url ? (
-        <div className="w-full rounded-2xl border border-border/50 overflow-hidden group relative cursor-pointer" onClick={() => setModalOpen(true)}>
+        <div className="w-full rounded-2xl border border-border/50 overflow-hidden group relative cursor-pointer bg-surface" onClick={() => setModalOpen(true)}>
           <img
             src={content.url}
             alt={content.alt}
@@ -50,7 +50,7 @@ export function ImageRender({ content }: RenderProps<'image'>) {
       ) : (
         <ImagePlaceholder />
       )}
-      {content.caption ? <figcaption className="text-sm text-text-muted">{content.caption}</figcaption> : null}
+      {content.caption ? <figcaption className="text-sm text-text-muted italic">{content.caption}</figcaption> : null}
     </figure>
   );
 }

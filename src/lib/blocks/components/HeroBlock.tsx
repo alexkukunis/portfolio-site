@@ -94,50 +94,59 @@ export function HeroRender({ content }: RenderProps<'hero'>) {
         <div className="mb-4" />
       )}
 
-      <div className="rounded-3xl overflow-hidden border border-border bg-surface mb-10">
-        {content.coverImageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={content.coverImageUrl} alt={content.title} className="w-full h-[50vh] object-cover" />
-        ) : (
-          <div className="w-full h-[50vh] flex items-center justify-center">
-            <ImagePlaceholder label="Cover image · 1600×900" />
+      <div className="w-full mb-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          {/* Image top on mobile, left on desktop */}
+          <div className="w-full lg:h-[min(65vh,550px)] lg:aspect-square rounded-3xl overflow-hidden border border-border bg-surface order-1 lg:order-1">
+            {content.coverImageUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={content.coverImageUrl} alt={content.title} className="w-full h-full object-cover" />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center">
+                <ImagePlaceholder label="Cover image · 1600×900 (displayed 1:1)" />
+              </div>
+            )}
           </div>
-        )}
+
+          {/* Content below on mobile, right on desktop */}
+          <div className="space-y-6 pt-4 lg:pt-0 order-2 lg:order-2 lg:max-w-2xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight [-webkit-line-clamp:5]">
+              {content.title || 'Untitled case study'}
+            </h1>
+            {content.summary ? (
+              <p className="text-lg md:text-xl text-text-muted leading-relaxed"> {content.summary}</p>
+            ) : null}
+            {pills.length ? (
+              <div className="flex flex-wrap gap-2">
+                {pills.map((p, i) => (
+                  <span key={i} className="px-3 py-1 rounded-full border border-border bg-surface text-xs font-medium text-text-muted">
+                    {p}
+                  </span>
+                ))}
+              </div>
+            ) : null}
+            {content.links && content.links.length > 0 ? (
+              <div className="flex flex-wrap gap-4">
+                {content.links.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-surface/50 hover:border-accent/50 hover:bg-accent/5 text-sm font-medium text-foreground hover:text-accent transition-all duration-200"
+                  >
+                    <LinkIcon icon={link.icon} className="w-4 h-4" />
+                    {link.label}
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        </div>
       </div>
-      <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-5">
-        {content.title || 'Untitled case study'}
-      </h1>
-      {content.summary ? (
-        <p className="text-lg md:text-xl text-text-muted max-w-3xl leading-relaxed mb-6">{content.summary}</p>
-      ) : null}
-      {pills.length ? (
-        <div className="flex flex-wrap gap-2">
-          {pills.map((p, i) => (
-            <span key={i} className="px-3 py-1 rounded-full border border-border bg-surface text-xs font-medium text-text-muted">
-              {p}
-            </span>
-          ))}
-        </div>
-      ) : null}
-      {content.links && content.links.length > 0 ? (
-        <div className="flex flex-wrap gap-4 mt-6">
-          {content.links.map((link, i) => (
-            <a
-              key={i}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-surface/50 hover:border-accent/50 hover:bg-accent/5 text-sm font-medium text-foreground hover:text-accent transition-all duration-200"
-            >
-              <LinkIcon icon={link.icon} className="w-4 h-4" />
-              {link.label}
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-          ))}
-        </div>
-      ) : null}
     </section>
   );
 }

@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "slug": "sydney-health-bcbs",
+    "published": true
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "content": {
+        "title": "Sydney Health Live Chat",
+        "summary": "Sydney Health is the mobile app for Blue Cross Blue Shield members. Before this project, getting help meant leaving the app, calling a number, and waiting 12 minutes on hold. I designed live chat end to end — from research through to shipping on iOS and Android. The result was 50K+ interactions in the first six months, 35% reduction in churn, and customer service costs cut significantly without adding headcount.",
+        "role": "Lead Product Designer",
+        "company": "Sydney Health",
+        "year": "2024",
+        "duration": "6 Months",
+        "coverImageUrl": "/uploads/sydneyhealth.png",
+        "logoUrl": "",
+        "logoUrlDark": "",
+        "links": []
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/sydney-chat-screens.png",
+        "caption": "Key screens from Sydney Health app",
+        "alt": "Sydney Health walkthrough screens"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Overview",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Sydney Health is the mobile app for Blue Cross Blue Shield members. Before this project, getting help meant leaving the app, calling a number, and waiting 12 minutes on hold. I designed live chat end to end — from research through to shipping on iOS and Android. The result was 50K+ interactions in the first six months, 35% reduction in churn, and customer service costs cut significantly without adding headcount."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "The Problem",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Members had one option when they needed help — call and wait. Average hold time was 12 minutes. Claims were confusing, physician access felt impossible, and members were leaving. Customer service was costing Sydney Health $2.5M a year and churn was running 35% above industry average."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Research",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/sydney-research-stats.png",
+        "caption": "Three bold stat cards on a dark background. \"78%\" — members wanted real-time support but had no in-app option. \"12 min\" — average hold time before this feature existed. \"35%\" — churn rate above industry average. Large white numbers, small grey labels.",
+        "alt": "Research stats cards on dark background"
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "25 interviews across younger and elderly members, observed CS call logs, and surveyed 200 users. Two things dominated every conversation — phone wait times and claim confusion. Elderly users flagged a separate layer of difficulty with the existing interface. Font sizes, tap targets, and navigation were actively working against them. The research pointed clearly at two separate problems that needed one cohesive solution."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Key Design Decision 1 — Contextual Chat Entry",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/sydney-contextual-chat.png",
+        "caption": "Two iPhone screens side by side. Left screen — Old flow: Member on the claims detail screen. They're confused about a charge. The only help option is a small \"Contact Us\" link at the bottom that opens the dialler and exits the app entirely. Disconnected and frustrating. Right screen — New flow: Same claims detail screen. A persistent chat button sits anchored at the bottom of the screen. Member taps it — the chat opens already knowing the context. A banner at the top of the chat reads \"Chatting about: Claim #48823 — $240 chh 3rd.\" The agent sees the same context immediately. Member doesn't have to explain anything.",
+        "alt": "Contextual chat entry before/after iPhone screens"
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "This was the most impactful single decision. Chat didn't open as a generic support window — it opened knowing exactly what the member was looking at. Average resolution time dropped from 12 minutes to under 2."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Key Design Decision 2 — Pre-Populated Member Data",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/sydney-prepop-data.png",
+        "caption": "iPhone screen showing the chat opening sequence. As the chat initialises a subtle animation shows member data loading in — name, plan type, active claims count, primary physician. A small line of copy reads \"We've pulled up your information so you don't have to repeat yourself.\" The agent view shown as a small inset — agent side already shows member profile, plan details, and current screen context before typing a single word.",
+        "alt": "Pre-populated member data chat opening"
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Members were repeating themselves to every agent on every call. Pre-populating member data from their profile and backend records into the chat session cut resolution time by 25% and came up as the most appreciated dett-launch feedback."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Key Design Decision 3 — Security as a Visible Design Element",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/sydney-security.png",
+        "caption": "iPhone screen showing the chat initiation flow. Before the chat opens, a clean one-screen consent and security flow — not a wall of legal text, a designed moment. Three simple icons in a row: a lock icon labelled \"End-to-end encrypted,\" a face ID icon labelled \"Verified with biometrics,\" and a shield icon labelled \"HIPAA compliant.\" Below them a single button: \"Start Secure Chat.\" Feels reassuring, not bureaucratic.",
+        "alt": "Security consent screen"
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "HIPAA compliance meant every interaction needed an audit trail and encryption from day one. Rather than burying security in settings, I made it visible at the moment members needed reassurance most — right before they shared sensitive health information. Trust scores went up 32% and the feature passed third-party HIPAA review without changes."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Accessibility",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/sydney-accessibility.png",
+        "caption": "Two iPhone screens side by side labelled \"Standard\" and \"Accessible.\" Left — Standard: The default chat interface. Normal type sizing, standard tap targets, default input bar. Right — Accessible: Same screen with larger type, visibly bigger tap targets on action buttons, a microphone icon prominent in the input bar for voice input. High contrast mode active — stronger colour differentiation between member and agent bubbles. The layout is identical — only the scale and input options have changed.",
+        "alt": "Standard vs accessible chat screens"
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Elderly members struggled with the existing app across the board. After Maze testing surfaced a 45% improvement in task success with larger targets and voice input, both became standard in the accessible variant — toggleable from the chat initiation screen. Accessibility improvements measured at 40% post launch."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Full Chat Flow",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/sydney-full-flow.png",
+        "caption": "Four iPhone screens in a horizontal row showing the complete journey. Screen 1 — Entry: Claims detail page with the contextual chat button anchored at the bottom. Unobtrusive until needed. Screen 2 — Security gate: The three-icon consent screen — encrypted, biometric, HIPAA. Clean and fast. One tap hat: Chat interface mid-conversation. Context banner at top showing the claim being discussed. Member bubble on the right, agent on the left. A \"Share document\" icon visible in the input bar — members can send photos of EOBs or ID cards directly in chat. Screen 4 — Resolution: Chat ends with a summary card — issue logged, next steps listed, a one-tap feedback prompt. \"Was this helpful?\" Two options. Simple close.",
+        "alt": "Full chat flow screens"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Results",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/sydney-results.png",
+        "caption": "Five bold metric cards on a deep navy background. Large numbers, context labels beneath each. \"50K+\" — interactions in first 6 months. \"12 min → under 2 min\" — average response time. \"↓35% Churn\" — reduction in member churn post launch. \"↑40% Accessibility Score\" — measured post Maze testing and launch. \"↓25% Complaints\" — reduction in support complaints within six months.",
+        "alt": "Results metrics cards"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "What I Learned",
+        "level": 2
+      }
+    },
+    {
+      "type": "list",
+      "content": {
+        "ordered": false,
+        "items": [
+          "Context is the feature. Opening a chat that already knows what the member is looking at did more for resolution time than any UI optimisation. Reducing what members had tign work.",
+          "Making security visible built trust instead of eroding it. Members felt safer seeing encryption confirmed than they would have felt not seeing it at all.",
+          "Testing with elderly users early changed the entire accessibility approach. They weren't an edge case — they were the stress test that made the experience better for everyone."
+        ]
+      }
+    }
+  ]
+}

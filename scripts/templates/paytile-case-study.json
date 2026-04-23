@@ -7,14 +7,14 @@
     {
       "type": "hero",
       "content": {
-        "title": "PayTile — Privacy-First Location Payments & Incentives",
-        "summary": "Led design system and product design for a privacy-first location payments platform — proximity P2P transfers, map-based money drops, and branded scavenger hunts. Delivered 71% improvement in privacy comfort, 94% task completion, and a successful MGM pilot with 22% conversion and 68% claim rate across iOS, Android, and Web.",
-        "role": "Senior Product Designer",
+        "title": "PayTile — Designing Privacy-First Proximity Payments",
+        "summary": "PayTile is a proximity payments platform — designed and shipped natively across iOS, Android, and Web. I led product design and the full design system. The core problem was one nobody in the payments space had solved — letting two people nearby exchange money without either person handing over a phone number, contact, or any personal information. The result: improvement in privacy comfort and 94% task completion.",
+        "role": "Senior Product Designer · iOS, Android & Web",
         "company": "PayTile",
         "year": "2025",
         "duration": "12 Weeks",
         "category": "fintech",
-        "coverImageUrl": "/uploads/paytile-feat_after.jpg",
+        "coverImageUrl": "/uploads/paytile-feat_after.png",
         "links": [
           {
             "label": "Website",
@@ -25,16 +25,20 @@
       }
     },
     {
-      "type": "links",
+      "type": "image",
       "content": {
-        "title": "Live Product",
-        "links": [
-          {
-            "label": "Website",
-            "url": "https://www.paytile.com",
-            "icon": "globe"
-          }
-        ]
+        "url": "/uploads/paytile-feat_after.png",
+        "alt": "PayTile featured hero image"
+      }
+    },
+    {
+      "type": "heading",
+      "content": { "text": "Overview", "level": 2 }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "PayTile is a proximity payments platform — designed and shipped natively across iOS, Android, and Web. I led product design and the full design system. The core problem was one nobody in the payments space had solved — letting two people nearby exchange money without either person handing over a phone number, contact, or any personal information. The result: improvement in privacy comfort and 94% task completion."
       }
     },
     {
@@ -44,204 +48,103 @@
     {
       "type": "text",
       "content": {
-        "body": "Sending money to someone nearby shouldn't require handing over your phone number to a stranger. But that's exactly what every existing payment app demanded. 71% of users in our research said they wouldn't share their phone number with someone they'd just met — yet Venmo, Cash App, and Zelle all required it. Beyond peer payments, businesses had no good way to create hyperlocal engagement, and nobody had solved frictionless location-based rewards without sacrificing privacy. PayTile was built to fix all three."
+        "body": "Every existing payment app — Venmo, Cash App, Zelle — requires a phone number or contact sync to send money to someone nearby. Our research found 71% of users wouldn't share their phone number with a stranger they'd just met. For proximity payments to work in the real world the entire privacy model had to be rethought from the ground up."
       }
     },
     {
       "type": "heading",
-      "content": { "text": "My Role & Scope", "level": 2 }
+      "content": { "text": "Research", "level": 2 }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/paytile-research.png",
+        "alt": "Research visualization: privacy stats, user interviews, competitive audit",
+        "caption": "The privacy gap every existing payment app left open"
+      }
     },
     {
       "type": "text",
       "content": {
-        "body": "I worked alongside a Design Lead, PM, Researcher, and six engineers. My scope covered the full design system foundation — tokens, component library, and cross-platform consistency — as well as the core product flows: location-based payments, map interactions, micro-animations, and the proximity P2P experience across iOS, Android, and Web."
+        "body": "We ran 12 user interviews focused on privacy and proximity preferences, six contextual map tests, and a privacy survey of 108 participants. The signal was consistent across every session — anonymity wasn't a nice-to-have. It was the baseline expectation. The fact that no existing app offered it was the gap PayTile was built for."
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Phase 1 — Research & Discovery", "level": 2 }
+      "content": { "text": "Initial Wireframes", "level": 2 }
     },
     {
-      "type": "text",
+      "type": "image",
       "content": {
-        "body": "We ran 12 user interviews focused on privacy, trust, and proximity preferences. Six contextual map tests revealed how people actually navigate and interact with location UI — a lot of assumptions didn't survive contact with real users. A privacy survey of 108 participants confirmed what we suspected: 71% wouldn't share their phone number with a stranger, and anonymity wasn't a nice-to-have, it was the baseline expectation. A competitive audit across Cash App, Venmo, Zelle, Life360, and Snap Map consistently revealed the same gap — nobody had combined proximity payments, real privacy controls, and gamification in a single coherent experience."
-      }
-    },
-    {
-      "type": "list",
-      "content": {
-        "ordered": false,
-        "items": [
-          "Proximity felt intuitive when framed as tapping on a map",
-          "Privacy needed to be visible and controllable at every touchpoint",
-          "Gamification meaningfully boosted adoption — task completion went up 27% in sessions where game mechanics were present"
-        ]
-      }
-    },
-    {
-      "type": "twocolumn",
-      "content": {
-        "side": "left",
-        "text": "Ideation and Findings",
-        "label": "Research Visualization",
-        "imageUrl": "/uploads/Screen-Shot-2022-10-24-at-2.18.41-PM-1.png",
-        "imageAlt": "Ideation and findings visualization showing research synthesis and key insight mapping"
+        "url": "/uploads/pt-wireframes.png",
+        "alt": "Early stage concept wireframes",
+        "caption": "Early stage concept wireframes"
       }
     },
     {
       "type": "heading",
-      "content": { "text": "User Engagement Strategy", "level": 2 }
+      "content": { "text": "The Design Solution — Three-Tier Privacy System", "level": 2 }
     },
     {
       "type": "text",
       "content": {
-        "body": "With the research synthesized, we mapped where existing payment apps were losing users and identified three areas to design into. First, streamlining interaction flows to reduce friction at every decision point. Second, introducing gamification and reward mechanics to drive retention beyond the first transaction. Third, polishing the UI to encourage exploration — the map was a canvas, not just a utility, and the design needed to reflect that."
+        "body": "The solution was a layered privacy model built into every step of the P2P flow. No phone numbers. No contact sync. No QR codes. Just proximity and mutual confirmation — with three tiers of control letting each user decide exactly how much they revealed."
       }
     },
     {
-      "type": "twocolumn",
+      "type": "image",
       "content": {
-        "side": "right",
-        "text": "User Engagement Analysis",
-        "label": "Strategy Visualization",
-        "imageUrl": "/uploads/Screen-Shot-2022-10-24-at-2.18.52-PM-1.png",
-        "imageAlt": "User engagement analysis chart showing identified improvement areas and strategy"
+        "url": "/uploads/paytile-privacy.png",
+        "alt": "Three-tier privacy model diagram",
+        "caption": "Three-tier privacy model — users control exactly how much they reveal at each stage"
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Design System Architecture", "level": 2 }
+      "content": { "text": "The P2P Flow", "level": 2 }
     },
     {
-      "type": "text",
+      "type": "image",
       "content": {
-        "body": "Before touching a single product screen I built a design system foundation the whole team would work from. Color tokens were intentional — purple for trust and security, yellow for rewards and discovery. A 4-point spacing grid cut developer QA issues by 33%. Elevation and shadow tokens gave the map layers a clear visual hierarchy so users always knew what was interactive and what wasn't. The component library covered seven button variants across five sizes, text fields, map markers, cards, privacy modals, and every skeleton, snackbar, toast, and alert state the product needed."
-      }
-    },
-    {
-      "type": "list",
-      "content": {
-        "ordered": false,
-        "items": [
-          "Designed for edge cases: GPS drift, weak signal/offline, tiles outside radius, users moving away mid-claim, duplicate claims, expired tiles, denied location permissions"
-        ]
+        "url": "/uploads/paytile-p2p-flow.png",
+        "alt": "Four iPhone screens showing the complete proximity payment journey",
+        "caption": "Detection to confirmation — no personal information exchanged at any point in the flow"
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Dropping Money on Map", "level": 2 }
+      "content": { "text": "The Map as the Interaction Surface", "level": 2 }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/paytile-money-drop.png",
+        "alt": "iPhone screen showing the map in active use with marker hierarchy",
+        "caption": "The map as primary interaction surface — not a background, the product itself"
+      }
     },
     {
       "type": "text",
       "content": {
-        "body": "The money drop interaction was one of the most interaction-design-dense problems in the product. I designed a long-press placement gesture with a physics-based drop animation and a radius heat preview so senders could see exactly who was in range before confirming. The animation wasn't decorative — it communicated distance, privacy radius, and confirmation state simultaneously without a single word of instructional UI copy."
-      }
-    },
-    {
-      "type": "twocolumn",
-      "content": {
-        "side": "left",
-        "text": "Dropping money on the map\n\n4.8/5 User satisfaction\n94% Task completion\n2.3s Avg. drop time\n87% Engagement rate",
-        "label": "",
-        "imageUrl": "/uploads/ezgif-1-48098f39a0.png",
-        "imageAlt": "Money drop animation showing long-press placement, physics drop, and radius heat preview"
+        "body": "The map was the product. Every decision about marker hierarchy, proximity indicators, and tile states was made to make the spatial logic feel intuitive without instruction. Users understood what proximity meant just by looking at the screen — no onboarding tooltip required."
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Peer-to-Peer Transactions", "level": 2 }
+      "content": { "text": "Design System", "level": 2 }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/pt-design-system.png",
+        "alt": "Design system component sheet",
+        "caption": "Design system built for a map-first, privacy-first, cross-platform product"
+      }
     },
     {
       "type": "text",
       "content": {
-        "body": "The proximity P2P flow was the hardest problem to solve. How do you let two strangers exchange money nearby without either person revealing personal information? The solution was a three-tier privacy system — blurred avatars, directional proximity arrows, and layered consent controls that let users choose exactly how much they revealed. No phone numbers, no contact sync, no QR codes. Just proximity and mutual confirmation."
-      }
-    },
-    {
-      "type": "twocolumn",
-      "content": {
-        "side": "right",
-        "text": "P2P transaction animation\nP2P Transaction Flow",
-        "label": "",
-        "imageUrl": "/uploads/ezgif-1-c8061774f1.png",
-        "imageAlt": "P2P transaction animation showing blurred avatars, directional arrows, and proximity verification flow"
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "End-to-End User Journey", "level": 2 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "The full product flow mapped how a user moves through PayTile — from dropping money to claiming a tile to completing a branded scavenger hunt — with every privacy decision point called out explicitly. This flow was a critical alignment tool with engineering and stakeholders, making sure every edge case and permission state was accounted for before a line of code was written."
-      }
-    },
-    {
-      "type": "image-grid",
-      "content": {
-        "images": [
-          {"url": "/uploads/pt-wireframes.png", "alt": "End-to-end PayTile user journey decision tree showing the full flow across all three core features", "caption": ""}
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Design Process — Ideation & Exploration", "level": 2 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "Early in the project I used hand-drawn wireframes to move fast through concepts before committing anything to Figma. Sketching map layouts, payment flows, and core interactions at low fidelity meant the team could react to ideas without getting attached to polish. From there, FigJam workshops and competitive visual analysis shaped the engagement strategy and helped us identify where PayTile could differentiate visually from the utility-first aesthetic of every competitor in the space."
-      }
-    },
-    {
-      "type": "twocolumn",
-      "content": {
-        "side": "right",
-        "text": "Early Sketch Wireframes",
-        "label": "Early Sketch Wireframes",
-        "imageUrl": "/uploads/brain-storm-wire.jpeg",
-        "imageAlt": "Early hand-drawn wireframes showing initial map layouts, payment flow exploration, and core interaction sketches"
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Visual Identity & Illustrations", "level": 2 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "The brand needed to feel trustworthy without feeling corporate, and rewarding without feeling gimmicky. Purple anchored the trust and security story throughout the product. Yellow signaled rewards and discovery. Custom illustrations were built to reinforce the brand across onboarding, empty states, and marketing surfaces — creating a visual language that felt consistent whether a user was seeing PayTile for the first time or their hundredth."
-      }
-    },
-    {
-      "type": "image-grid",
-      "content": {
-        "images": [
-          {"url": "/uploads/paytile-illustrations.png", "alt": "PayTile brand illustrations showing the visual identity system in context", "caption": ""},
-          {"url": "/uploads/website-paytile-illustration.jpg", "alt": "Brand visuals showing color, illustration style, and design consistency across touchpoints", "caption": ""}
-        ]
-      }
-    },
-    {
-      "type": "heading",
-      "content": { "text": "Map Features & Capabilities", "level": 2 }
-    },
-    {
-      "type": "text",
-      "content": {
-        "body": "The map was the core of the product — not a background element, but the primary interaction surface. Location-based payments let users transact without any personal information exchanged. Money drops let anyone — friends, family, or businesses — place incentives at specific locations for others to claim. Community scavenger hunts gave brands a way to create hyperlocal engagement that felt playful rather than promotional."
-      }
-    },
-    {
-      "type": "twocolumn",
-      "content": {
-        "side": "left",
-        "text": "Map Features Visualization",
-        "label": "Capabilities Overview",
-        "imageUrl": "/uploads/Screen-Shot-2022-10-24-at-2.19.01-PM-1.png",
-        "imageAlt": "Map features and capabilities diagram showing proximity payments, drop mechanics, and scavenger hunt interactions"
+        "body": "Purple carried trust and security throughout every screen. Yellow signalled rewards and discovery. Every primary action in the product mapped to one of the two — the colour system was functional, not decorative. Built once in the design system, applied consistently across iOS, Android, and Web without rebuilding for each platform."
       }
     },
     {
@@ -249,30 +152,25 @@
       "content": { "text": "Results", "level": 2 }
     },
     {
-      "type": "list",
+      "type": "image",
       "content": {
-        "ordered": false,
-        "items": [
-          "94% task completion, 4.8/5 satisfaction score on animation delight",
-          "Privacy comfort up 61%, payment time down from 45 seconds to 14 seconds",
-          "87% of users dropping money weekly, DAU up 19% after scavenger hunts",
-          "MGM pilot: 22% conversion, 68% claim rate, 2.7 minute average claim time",
-          "Design system cut new UI build time by 38%, reduced inconsistencies by 50%, and dropped review rounds from 3 to 1.5"
-        ]
+        "url": "/uploads/pt-results-privacy.png",
+        "alt": "Privacy results metrics",
+        "caption": "Privacy-first design validated through research, testing, and real user sessions across iOS and Android"
       }
     },
     {
       "type": "heading",
-      "content": { "text": "Key Learnings", "level": 2 }
+      "content": { "text": "What I Learned", "level": 2 }
     },
     {
       "type": "list",
       "content": {
         "ordered": false,
         "items": [
-          "The design system exists to serve the product, not the other way around. Early pressure to over-engineer the token architecture before we had enough product context was real — shipping a leaner system and iterating it alongside the product was the right call, and the 4-point grid alone cut developer QA issues by a third.",
-          "Privacy UX needs more explicit clarity than you expect. Telling users their location is protected isn't enough — they need to see it working in real time, at the moment it matters. Making privacy controls visible and persistent was what actually moved the comfort metric from passive reassurance to genuine trust.",
-          "Business KPIs belong in the design brief from day one. Claim rate and distance-to-claim were the numbers that mattered to MGM — designing the scavenger hunt flow around those specific metrics rather than generic engagement is what made the pilot land."
+          "Making privacy visible at the exact moment users needed reassurance — not buried in a settings menu — was what moved the comfort metric. Showing the blurred avatar actively protecting them in real time was more convincing than any copy or legal disclaimer could be.",
+          "The three-tier consent model came from research not assumption. Early designs had a binary — anonymous or revealed. Testing showed users wanted granular control between the two extremes. The middle tier became the most used option post launch.",
+          "Designing the map as a primary interaction surface rather than a utility background changed every decision — marker hierarchy, animation timing, proximity logic — in ways a standard screen-first approach would have missed entirely. The map had to feel alive, not just accurate."
         ]
       }
     }

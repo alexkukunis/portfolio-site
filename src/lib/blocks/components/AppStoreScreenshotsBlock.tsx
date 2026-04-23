@@ -58,7 +58,7 @@ export function RenderAppStoreScreenshots({ content }: RenderProps<'appstore-scr
               <img
                 src={ss.url}
                 alt={ss.alt}
-                className="w-full h-auto rounded-2xl border border-border/50 object-cover shadow-2xl"
+                className="w-full h-auto rounded-2xl border border-border/50 object-contain shadow-2xl"
               />
             ) : (
               <ScreenshotPlaceholder label={ss.alt || `Screen ${i + 1}`} />

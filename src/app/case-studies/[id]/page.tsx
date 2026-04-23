@@ -58,7 +58,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Navbar />
       <main className="flex-1">
-        <article className="max-w-4xl mx-auto px-6 pt-12 pb-12">
+        <article className="max-w-6xl mx-auto px-6 lg:px-8 pt-12 pb-12">
           {isDraft ? (
             <div className="mb-6 rounded-xl border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-sm text-orange-300">
               Draft — not visible to the public.
@@ -67,7 +67,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
           <RenderBlocks blocks={study.blocks as any} />
           {/* Next/Prev Navigation */}
           {(prevStudy || nextStudy) && (
-            <nav className="mt-20 pt-12 border-t border-border/30 bg-surface/80 backdrop-blur-md rounded-2xl p-6 flex flex-col lg:flex-row gap-4 justify-center lg:justify-between items-center">
+            <nav className="mt-20 pt-12 border-t border-border/30 bg-surface/80 backdrop-blur-md rounded-2xl p-6 flex flex-col lg:flex-row gap-4 justify-center lg:justify-between items-center max-w-4xl mx-auto">
               {prevStudy && (
                 <Link
                   href={`/case-studies/${prevStudy.slug}`}
