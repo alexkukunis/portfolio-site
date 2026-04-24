@@ -4,6 +4,7 @@ import FeaturedStudies from "@/components/FeaturedStudies";
 import CaseStudiesSkeleton from "@/components/CaseStudiesSkeleton";
 
 export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 export default function Home() {
   return (
