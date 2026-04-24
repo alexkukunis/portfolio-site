@@ -14,14 +14,14 @@ export default function CaseStudyCard({ study, href, isLocked = false, className
       href={href}
       className={`group relative rounded-2xl border border-border hover:border-foreground/30 hover:shadow-md transition-all duration-300 block ${className}`}
     >
-      <div className="flex h-[320px] md:h-[380px]">
-        {/* Image left */}
-        <div className="w-1/2 relative overflow-hidden rounded-l-xl flex-shrink-0 bg-muted/20">
+      <div className="flex flex-col md:flex-row md:divide-x md:divide-border/50">
+        {/* Image top/left */}
+        <div className="w-full md:w-3/5 relative overflow-hidden flex-shrink-0 bg-muted/20 aspect-[4/3] md:h-full md:aspect-auto rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none">
           {study.coverImageUrl || study.imageUrl ? (
             <img
               src={study.coverImageUrl ?? study.imageUrl}
               alt={study.title}
-              className="w-full h-full aspect-[3/4] object-cover object-top transition-transform duration-300"
+              className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-muted/80">
@@ -47,16 +47,24 @@ export default function CaseStudyCard({ study, href, isLocked = false, className
             </div>
           )}
         </div>
-        {/* Content right */}
-        <div className="w-1/2 p-4 flex flex-col rounded-r-xl">
-          <div className="flex items-center gap-1.5 mb-2 text-xs uppercase tracking-wide font-medium text-muted-foreground/90 group-hover:text-foreground/100 transition-colors">
-            {study.company && study.company}
-            {study.role && <span className="text-muted-foreground/70">· {study.role}</span>}
+        {/* Content bottom/right */}
+        <div className="w-full md:w-2/5 p-4 md:p-5 flex flex-col flex-1 rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none min-h-[140px]">
+          <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
+            {study.company && (
+              <span className="inline-flex px-2.5 py-1 bg-muted/50 border border-muted/50 text-xs font-semibold uppercase tracking-wider text-foreground/80 hover:bg-muted/70 hover:border-muted/70 hover:text-foreground hover:scale-[1.02] transition-all duration-200 rounded-full">
+                {study.company}
+              </span>
+            )}
+            {study.role && (
+              <span className="inline-flex px-2.5 py-1 bg-muted/40 border border-muted/40 text-xs font-medium text-foreground/70 hover:bg-muted/60 hover:border-muted/60 hover:text-foreground/90 hover:scale-[1.02] transition-all duration-200 rounded-full">
+                {study.role}
+              </span>
+            )}
           </div>
-          <h3 className="text-lg md:text-xl font-bold leading-snug mb-2 line-clamp-2 text-foreground group-hover:text-foreground/90 transition-colors">
+          <h3 className="text-base md:text-xl font-bold leading-snug mb-3 md:mb-4 line-clamp-2 text-foreground group-hover:text-foreground/90 transition-colors">
             {study.title}
           </h3>
-          <p className="text-sm leading-relaxed line-clamp-3 text-muted-foreground/75">
+          <p className="text-sm leading-relaxed line-clamp-3 text-muted-foreground/75 flex-1">
             {study.summary}
           </p>
         </div>

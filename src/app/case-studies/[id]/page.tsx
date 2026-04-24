@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { RenderBlocks } from '@/components/case-study/Blocks';
+import BackToTop from '@/components/BackToTop';
 import { getCaseStudies, getCaseStudyByIdOrSlug } from '@/lib/crud';
 
 interface PageProps {
@@ -94,6 +95,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               )}
             </nav>
           )}
+          <BackToTop />
         </article>
       </main>
       <Footer />

@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "slug": "foodwell",
+    "published": true
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "content": {
+        "title": "Making healthy meals effortless",
+        "summary": "Redesigned the end-to-end ordering experience for a subscription-based healthy food delivery service — lifting conversion from 2.5% to 4.5% through a simplified checkout flow, personalized meal recommendations, and an urgency-driven purchase timer.",
+        "role": "Product Designer",
+        "company": "FoodWell",
+        "year": "2025",
+        "duration": "8 weeks",
+        "coverImageUrl": "",
+        "logoUrl": "",
+        "logoUrlDark": "",
+        "links": []
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/foodwell-overview.png",
+        "caption": "Hero screen: Final polished FoodWell app on iPhone 15 Pro mockup — meal browsing page with clean grid of meal cards.",
+        "alt": "FoodWell hero app mockup"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "The Problem",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "A conversion problem. Only 2.5% of users who landed on the platform completed an order — well below industry benchmarks for food delivery services. Users were getting lost in an ordering flow that gave them no guidance, no personalization, and no reason to act now. The business was losing revenue at checkout, and users were leaving frustrated.\nThe brief was clear: fix the ordering workflow, reduce abandonment, and create an experience that felt as good as the food it delivered."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "",
+        "caption": "Before/after: Old cluttered FoodWell ordering (left) vs redesigned clean flow (right) with sticky cart and countdown timer.",
+        "alt": "FoodWell ordering before/after"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Research",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Before designing anything, I needed to understand where and why users were dropping off. I conducted six user interviews with existing FoodWell subscribers and ran a survey with 40 additional customers, focusing on three questions: where does the ordering process feel hard, what would make you more likely to complete a purchase, and what do you value most in a food delivery service.\nWhat came back was consistent. Users weren't confused by the concept of FoodWell — they were uncertain in the moment of choosing. The meal catalog felt overwhelming without any personalized guidance. And at checkout, there was nothing creating a sense of forward momentum. Users would add meals to their cart, then leave the tab open, intending to come back — and never do."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "",
+        "caption": "Research synthesis: Miro affinity map with color-coded clusters of user quotes on discovery, checkout, personalization.",
+        "alt": "FoodWell research affinity map"
+      }
+    },
+    {
+      "type": "list",
+      "content": {
+        "items": [
+          "Users were not abandoning checkout because the process was broken. They were abandoning because the experience never made them feel certain enough to commit.",
+          "Every design decision that followed came back to this single insight: reduce uncertainty, increase momentum.",
+          "Specifically, four things needed to change. The meal discovery experience needed to surface personalized ones instead of making users scroll through an undifferentiated catalog.",
+          "The checkout flow needed to feel like a clear, short path rather than an open-ended form. There needed to be a mechanism that created urgency — something that prompted users to complete their order now rather than later.",
+          "And the overall experience needed to reflect the quality of what FoodWell was actually selling: fresh, considered, good for you."
+        ],
+        "ordered": false
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Design Criteria",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Before moving to design, I defined four criteria that every decision would be measured against:\nStreamline the ordering flow — reduce the number of steps from meal selection to order confirmation and remove every piece of friction that doesn't earn its place.\nSurface smart recommendations — design a discovery experience driven by user preference data and order history, so users feel like the platform knows them.\nCreate urgency at checkout — introduce a mechanism that gives users a clear reason to complete their order in this session rather than returning to it later.\nConversion from 2.5% to 4.5% — keep this number visible throughout the design process as the concrete measure of success."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Design",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "The design phase started not with screens but with the flow. I mapped the existing journey step by step and identified every moment where a user had to make a decision without enough information, wait for something to load, or re-enter something they'd already told us. Those moments became the targets."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "",
+        "caption": "User flow comparison: Old 10-step journey (top) vs redesigned 5-step (bottom) with drop-off annotations.",
+        "alt": "FoodWell user flow comparison"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "01 — Simplified ordering workflow",
+        "level": 3
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "The existing flow had ten steps between arriving on the platform and completing an order. Many of those steps existed for technical reasons that made sense to the engineering team but created unnecessary friction for the user. Account creation was required mid-flow. Delivery details were asked for before the user had even seen their cart. The payment page was a separate screen from the review screen.\nThe redesigned flow consolidated this into five steps. Account creation was moved to before the ordering flow begins, handled at signup. Delivery details were pre-filled from the user's profile. The cart summary, delivery information, and payment were combined into a single checkout screen. Every step that remained earned its because it gave the user information they needed to feel confident in their decision — not because it was convenient for the system."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "",
+        "caption": "Ordering flow screens: Home with recommendations, meal detail, unified checkout on iPhone mockups.",
+        "alt": "FoodWell ordering screens"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "02 — Smart recommendations",
+        "level": 3
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "One of the clearest findings from research was that users felt lost when they opened the meal catalog. With dozens of options and no way to know which ones were relevant to them, many users defaulted to scrolling until something caught their eye — an unreliable and unsatisfying experience.\nThe redesigned discovery experience replaced the generic catalog with a personalized meal feed. On first use, users answer five quick questions about their dietary preferences, household size, and cooking confidence. From the second session onward, the feed is ranked by a combination of those preferences, their previous order history, and meals that are trending among users with similar profiles. The result is a home screen that feels considered — like a recommendation from someone who knows your taste."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "",
+        "caption": "Recommendation UI: Personalized meal feed and filtered state on iPhone screens.",
+        "alt": "FoodWell recommendation UI"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "03 — Urgency-driven checkout timer",
+        "level": 3
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "The most consequential design decision in this project was the checkout timer — and also the one that required the most careful thinking.\nThe research was clear: users who added meals to their cart but didn't complete their order rarely came back. It wasn't that they changed their mind. It was that they lost momentum. Life interrupted, the tab stayed open, and the order never happened. A mechanism that created a defined window for completing the order would address this directly.\nThe timer appears at the top of the checkout screen after a user adds their first item to their cart. It gives users 12 minutes to complete their order, framed not as a threat but as a reservation: \"Your meals are reserved for 12:00.\" The language is deliberate — it borrows from the familiar mental model of a restaurant reservation or a held seat, which feels considerate rather than pressured. If the timer expires, the cart is saved but the reservation lapses, and the user is invited to restart checkout with a gentle, non-punitive message."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "",
+        "caption": "Checkout timer screens: Active reservation (left) and expired state (right) on iPhone.",
+        "alt": "FoodWell checkout timer"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Key Screens",
+        "level": 2
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "",
+        "caption": "Full screen gallery: 6 iPhone 15 Pro mockups in 3x2 grid — home, browse, detail, checkout, confirmation, dashboard.",
+        "alt": "FoodWell key screens gallery"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Outcome",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "The redesigned FoodWell experience launched at the end of the eight-week engagement. Conversion rate increased from 2.5% to 4.5% — an 80% relative improvement. Cart abandonment dropped by 34%. Users who engaged with the personalized recommendation feed had a 22% higher average order value than those who browsed the standard catalog.\nMore importantly, the qualitative feedback shifted. Users in post-launch testing described the experience as \"easy,\" \"intuitive,\" and — most tellingly — \"it felt like it knew what I wanted.\""
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/foodwell-outcome.png",
+        "caption": "Impact metrics: Before/after conversion chart, cart abandonment drop, AOV increase panels.",
+        "alt": "FoodWell outcome metrics"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Trade-offs & Next Chapter",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "No project is finished — it's shipped. A few things I would carry forward or do differently:\nWe prioritized a rules-based recommendation engine to hit the eight-week timeline. A machine learning model trained on behavioral data would surface more nuanced personalization over time — this was scoped for a phase two build and handed off to the engineering team with a detailed brief.\nThe checkout timer performed well in testing but requires ongoing monitoring. If users begin to feel the 12-minute window as pressure rather than a helpful prompt, the framing or duration should be adjusted. Behavioral data from the first three months will tell us which way it lands at scale.\nAccessibility was addressed at the component level — color contrast, tap target sizing, screen reader labels — but a full accessibility audit with assistive technology users was not completed within this engagement. That work should happen before the next major release.\nDietary specialization features — catering to specific requirements like coeliac, diabetic-friendly, or postpartum nutrition — were identified as a significant opportunity during research but fell outside the scope of this project. Partnering with registered nutritionists to build this out would meaningfully expand FoodWell's addressable market."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Closing",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "\"Redesigning FoodWell's ordering flow taught me that simplification isn't about removing features — it's about surfacing the right thing at the right moment so users feel confident, not overwhelmed.\""
+      }
+    }
+  ]
+}
