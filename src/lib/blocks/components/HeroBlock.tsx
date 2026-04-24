@@ -100,7 +100,7 @@ export function HeroRender({ content }: RenderProps<'hero'>) {
           <div className="w-full lg:h-[min(65vh,550px)] lg:aspect-square rounded-3xl overflow-hidden border border-border bg-surface order-1 lg:order-1">
             {content.coverImageUrl ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={content.coverImageUrl} alt={content.title} className="w-full h-full object-cover" />
+              <img src={content.coverImageUrl} alt={content.title} className="w-full h-full object-cover object-top" />
             ) : (
               <div className="w-full h-full flex items-center justify-center">
                 <ImagePlaceholder label="Cover image · 1600×900 (displayed 1:1)" />

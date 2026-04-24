@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "slug": "hm-checkout-redesign",
+    "published": true
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "content": {
+        "title": "H&M Checkout Redesign",
+        "summary": "Reducing cart abandonment from 60% to 30% through a streamlined mobile-first checkout experience",
+        "role": "Senior Product Designer",
+        "company": "H&M",
+        "year": "2025",
+        "duration": "4 Weeks",
+        "coverImageUrl": "/uploads/hmbrain.png",
+        "logoUrl": "",
+        "logoUrlDark": "",
+        "links": []
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/hm-overview.png",
+        "caption": "Before/after checkout: old 6-step cluttered checkout vs. new clean 3-step flow",
+        "alt": "Hero comparison of old vs new H&M checkout"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "The Problem",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "H&M was losing 60% of shoppers at the one moment that mattered most — checkout.\nNot because the products were wrong. Not because the prices were off. Because the experience of actually buying something was broken.\nSix steps. Redundant form fields. No visible security signals. A mobile layout that ignorebs actually work. Shoppers were filling carts and leaving — and the data made it impossible to ignore.\nThis was the one problem worth solving."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/hm-research.png",
+        "caption": "Only 24% of users completed checkout—losing over 75% of potential customers—because of friction at every step: forced account creation, confusing delivery options, and unclear payment confirmation",
+        "alt": "Checkout funnel drop-off data"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Research",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "I wanted to understand not just where people were dropping off — but why.\n\nStarting with H&M Brain analytics, I mapped key drop-off points across the funnel. I then spoke with 20+ shoppers and ran a broader survey to add quantitative context to those patterns.\n\nA few consistent themes emerged:"
+      }
+    },
+    {
+      "type": "list",
+      "content": {
+        "items": [
+          "Friction from length. The six-step flow felt long and open-ended. Without a clear sense of progress, many users exited early.",
+          "Trust gaps. A significant portion of users expressed hesitation around payment security, yet there were no clear trust signals at that moment.",
+          "Mobile misalignment. Form fields, tap targets, and CTAs were designed with desktop in mind, but most users were completing the flow on mobile."
+        ],
+        "ordered": false
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "These patterns showed up across both interviews and survey responses, pointing to the same underlying issues from different angles."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/hm-metrics.png",
+        "caption": "Research uncovered that nearly half of users struggle with trust at checkout, delivery clarity, and size confidence—revealing the top opportunities to reduce friction and increase conversions",
+        "alt": "Key research insights"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Goals",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "I set targets that tied directly to business outcomes — not just design improvements.\nMetric | Before | Target | Result\n---|---|---|---\nCart Abandonment | 60% | 40% | 30%\nCheckout Steps | 6 | 3 | 3\nConversion Rate | 2.5% | 3.5% | 4.5%\nNPS | 42 | 55 | 68\nCSAT | 3.5 | 4.0 | 4.2"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Design Decisions",
+        "level": 2
+      }
+    },
+    {
+      "type": "list",
+      "content": {
+        "items": [
+          "Collapsing 6 steps to 3\nBag review, delivery, and payment were restructured into a single continuous flow with inline editing. No more jumping backward. No more re-entering data.",
+          "Trust signals at the point of doubt\nSecurity badges, encrypted payment indicators, and a clear returns policy were surfaced at the payment step — exactly where 40% of users were dropping off.",
+          "Mobile-first layout from the first wireframe\nThumb zones determined button placement. Form fields were full-width with large touch targets. Auto-fill and Apple/Google Pay were prioritised as primary payment paths, not afterthoughts.",
+          "Progress transparency\nA minimal 3-step progress indicator gave users a finish line. Subtle micro-animations confirmed each action without demanding attention.",
+          "WCAG AA accessibility — built in, not bolted on\nColour contrast, focus states, and screen reader compatibility were part of the component spec from day one."
+        ],
+        "ordered": true
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/hm-checkout-wireframes.png",
+        "caption": "Wireframes / Early Exploration low fidelity progression showing 3–4 iterations of the checkout flow.",
+        "alt": "Wireframe iterations"
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "/uploads/hm-checkout-hifi.png",
+        "caption": "Final high-fidelity mobile screens of the checkout flow",
+        "alt": "Final mobile checkout screens"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Design System Contribution",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Working alongside the DS lead, I extended H&M's existing design system to support the redesign at scale.\nThis inclding the token library (colour, spacing, typography, elevation), building reusable checkout-specific components — form fields, progress indicators, trust badges, payment selectors — and documenting interaction states for engineering handoff.\nThe output wasn't just a new checkout. It was infrastructure the broader team could build on."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "",
+        "caption": "Design System / Component Library",
+        "alt": "Design system components"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "Outcome",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "The redesign shipped across web, iOS, and Android within the 4-week sprint.\nCart abandonment dropped from 60% to 30%.\nConversion rate increased 80% — from 2PS rose from 42 to 68.\nThe metrics confirmed what the research had already shown: the problem was never motivation. Shoppers wanted to buy. The experience just needed to get out of the way."
+      }
+    },
+    {
+      "type": "image",
+      "content": {
+        "url": "",
+        "caption": "Results / Impact",
+        "alt": "Results metrics"
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "text": "What I'd Do Differently",
+        "level": 2
+      }
+    },
+    {
+      "type": "text",
+      "content": {
+        "body": "Guest checkout was de-prioritised due to sprint scope. In hindsight, forcing account creation likely accounts for a remaining portion of abandonment. That would be the next experiment — reducing the account creation barrier without compromising H&M's loyalty data strategy."
+      }
+    }
+  ]
+}

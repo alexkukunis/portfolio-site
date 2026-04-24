@@ -34,7 +34,7 @@ export function ImageRender({ content }: RenderProps<'image'>) {
           <img
             src={content.url}
             alt={content.alt}
-            className="w-full h-auto max-h-[80vh] object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            className="w-full h-auto max-h-[80vh] object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
