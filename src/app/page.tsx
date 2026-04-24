@@ -1,13 +1,11 @@
+import { Suspense } from 'react';
 import PageLayout from "@/components/layout/PageLayout";
-import FilterableStudies from "@/components/FilterableStudies";
-import CaseStudyCard from "@/components/CaseStudyCard";
-import { getCaseStudies } from "@/lib/crud";
+import FeaturedStudies from "@/components/FeaturedStudies";
+import CaseStudiesSkeleton from "@/components/CaseStudiesSkeleton";
 
 export const revalidate = 60;
 
-export default async function Home() {
-  const studies = await getCaseStudies({ publishedOnly: true });
-
+export default function Home() {
   return (
     <PageLayout
       title=""
@@ -34,17 +32,14 @@ export default async function Home() {
         </div>
 
         {/* Case Studies */}
-        {studies.length > 0 && (
-          <section>
-            <h2 className="text-sm font-medium uppercase tracking-wider text-text-muted mb-8">
-              Case studies
-            </h2>
-            <FilterableStudies 
-              studies={studies}
-              lockedSlugs={['dealer-tire-storefront-redesign', 'paytile-location-payments', 'stmble-dating-app']}
-            />
-          </section>
-        )}
+        <section>
+          <h2 className="text-sm font-medium uppercase tracking-wider text-text-muted mb-8">
+            Case studies
+          </h2>
+          <Suspense fallback={<CaseStudiesSkeleton />}>
+            <FeaturedStudies />
+          </Suspense>
+        </section>
       </div>
     </PageLayout>
   );
