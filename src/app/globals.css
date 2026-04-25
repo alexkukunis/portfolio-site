@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  /* ChatGPT-inspired color palette */
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --text-muted: #64748b;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+  --accent: #6366f1;
+}
+
+.dark {
   --background: #0d0d0d;
   --surface: #171717;
   --border: #262626;

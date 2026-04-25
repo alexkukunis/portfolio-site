@@ -24,7 +24,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ThemeScript />
+        {children}
+      </body>
     </html>
+  );
+}
+
+function ThemeScript() {
+  return (
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `(() => {
+          const t = localStorage.getItem('theme'), m = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (!t && m || t === 'dark') document.documentElement.classList.add('dark');
+        })();`,
+      }}
+    />
   );
 }

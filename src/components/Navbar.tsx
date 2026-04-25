@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -15,14 +15,27 @@ const navLinks = [
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+    return 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="text-lg font-bold text-foreground no-underline underline-none decoration-none border-0 border-none bg-transparent rounded-none p-0 m-0 outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 focus-visible:border-0 focus:ring-0 ring-0 shadow-none ring-inset-0"
           >
             Alex Kukunis
@@ -68,6 +81,20 @@ export default function Navbar() {
                 </Link>
               )
             ))}
+
+            {/* Desktop Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-text-muted hover:text-foreground hover:bg-surface transition-colors ml-2"
+              aria-label="Toggle theme"
+              title="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <SunIcon className="w-5 h-5" />
+              ) : (
+                <MoonIcon className="w-5 h-5" />
+              )}
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -143,9 +170,40 @@ export default function Navbar() {
                 </Link>
               )
             ))}
+
+            {/* Mobile Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="w-full px-4 py-2 rounded-lg text-sm font-medium text-text-muted hover:text-foreground hover:bg-surface transition-colors mt-2 flex items-center justify-center"
+              aria-label="Toggle theme"
+              title="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <SunIcon className="w-5 h-5" />
+              ) : (
+                <MoonIcon className="w-5 h-5" />
+              )}
+            </button>
           </div>
         )}
       </div>
     </nav>
+  );
+}
+
+function SunIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...props} viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5" />
+      <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>
+  );
+}
+
+function MoonIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...props} viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+    </svg>
   );
 }
