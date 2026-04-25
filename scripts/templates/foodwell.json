@@ -23,7 +23,7 @@
       "type": "image",
       "content": {
         "url": "/uploads/foodwell-overview.png",
-        "caption": "Hero screen: Final polished FoodWell app on iPhone 15 Pro mockup — meal browsing page with clean grid of meal cards.",
+        "caption": "",
         "alt": "FoodWell hero app mockup"
       }
     },
@@ -65,7 +65,7 @@
       "type": "image",
       "content": {
         "url": "/uploads/foodwell-research.png",
-        "caption": "Research synthesis: Miro affinity map with color-coded clusters of user quotes on discovery, checkout, personalization.",
+        "caption": "FoodWell research synthesis: affinity map",
         "alt": "FoodWell research affinity map"
       }
     },
@@ -112,7 +112,7 @@
       "type": "image",
       "content": {
         "url": "/uploads/foodwell-metrics.png",
-        "caption": "User flow comparison: Old 10-step journey (top) vs redesigned 5-step (bottom) with drop-off annotations.",
+        "caption": "Streamlined the checkout flow from 8 steps to 5",
         "alt": "FoodWell user flow comparison"
       }
     },
@@ -133,7 +133,7 @@
       "type": "image",
       "content": {
         "url": "/uploads/foodwell-workflow.png",
-        "caption": "Ordering flow screens: Home with recommendations, meal detail, unified checkout on iPhone mockups.",
+        "caption": "Ordering flow screens: Home with recommendations, meal detail, checkout.",
         "alt": "FoodWell ordering screens"
       }
     },
@@ -154,7 +154,7 @@
       "type": "image",
       "content": {
         "url": "/uploads/foodwell-smart.png",
-        "caption": "Recommendation UI: Personalized meal feed and filtered state on iPhone screens.",
+        "caption": "Personalized meal feed and filtered state ",
         "alt": "FoodWell recommendation UI"
       }
     },
@@ -190,7 +190,7 @@
       "type": "image",
       "content": {
         "url": "/uploads/foodwell-key.png",
-        "caption": "Full screen gallery: 6 iPhone 15 Pro mockups in 3x2 grid — home, browse, detail, checkout, confirmation, dashboard.",
+        "caption": "Display of key screens home, browse, checkout flow",
         "alt": "FoodWell key screens gallery"
       }
     },

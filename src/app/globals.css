@@ -103,3 +103,11 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   margin-right: 0;
 }
 
+/* Override Google Material Symbols via higher specificity (no !important) */
+span.material-symbols-outlined {
+  font-variation-settings: 'opsz' 20;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 400;
+}
+

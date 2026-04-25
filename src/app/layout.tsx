@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -23,24 +24,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html suppressHydrationWarning lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+      </head>
       <body className="min-h-full flex flex-col">
-        <ThemeScript />
+        <script
+          id="theme-script"
+          dangerouslySetInnerHTML={{
+            __html: `localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark')`,
+          }}
+          suppressHydrationWarning
+        />
         {children}
       </body>
     </html>
-  );
-}
-
-function ThemeScript() {
-  return (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `(() => {
-          const t = localStorage.getItem('theme'), m = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          if (!t && m || t === 'dark') document.documentElement.classList.add('dark');
-        })();`,
-      }}
-    />
   );
 }
