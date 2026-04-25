@@ -13,7 +13,7 @@
         "company": "FoodWell",
         "year": "2025",
         "duration": "8 weeks",
-        "coverImageUrl": "",
+        "coverImageUrl": "/uploads/foodwell-overview.png",
         "logoUrl": "",
         "logoUrlDark": "",
         "links": []
@@ -22,7 +22,7 @@
     {
       "type": "image",
       "content": {
-        "url": "/uploads/foodwell-overview1.png",
+        "url": "/uploads/foodwell-overview.png",
         "caption": "Hero screen: Final polished FoodWell app on iPhone 15 Pro mockup — meal browsing page with clean grid of meal cards.",
         "alt": "FoodWell hero app mockup"
       }
@@ -43,7 +43,7 @@
     {
       "type": "image",
       "content": {
-        "url": "",
+        "url": "/uploads/foodwell-hifi.png",
         "caption": "Before/after: Old cluttered FoodWell ordering (left) vs redesigned clean flow (right) with sticky cart and countdown timer.",
         "alt": "FoodWell ordering before/after"
       }
@@ -64,7 +64,7 @@
     {
       "type": "image",
       "content": {
-        "url": "",
+        "url": "/uploads/foodwell-research.png",
         "caption": "Research synthesis: Miro affinity map with color-coded clusters of user quotes on discovery, checkout, personalization.",
         "alt": "FoodWell research affinity map"
       }
@@ -111,7 +111,7 @@
     {
       "type": "image",
       "content": {
-        "url": "",
+        "url": "/uploads/foodwell-metrics.png",
         "caption": "User flow comparison: Old 10-step journey (top) vs redesigned 5-step (bottom) with drop-off annotations.",
         "alt": "FoodWell user flow comparison"
       }
@@ -132,7 +132,7 @@
     {
       "type": "image",
       "content": {
-        "url": "",
+        "url": "/uploads/foodwell-workflow.png",
         "caption": "Ordering flow screens: Home with recommendations, meal detail, unified checkout on iPhone mockups.",
         "alt": "FoodWell ordering screens"
       }
@@ -153,7 +153,7 @@
     {
       "type": "image",
       "content": {
-        "url": "",
+        "url": "/uploads/foodwell-smart.png",
         "caption": "Recommendation UI: Personalized meal feed and filtered state on iPhone screens.",
         "alt": "FoodWell recommendation UI"
       }
@@ -174,7 +174,7 @@
     {
       "type": "image",
       "content": {
-        "url": "",
+        "url": "/uploads/foodwell-timer.png",
         "caption": "Checkout timer screens: Active reservation (left) and expired state (right) on iPhone.",
         "alt": "FoodWell checkout timer"
       }
@@ -189,7 +189,7 @@
     {
       "type": "image",
       "content": {
-        "url": "",
+        "url": "/uploads/foodwell-key.png",
         "caption": "Full screen gallery: 6 iPhone 15 Pro mockups in 3x2 grid — home, browse, detail, checkout, confirmation, dashboard.",
         "alt": "FoodWell key screens gallery"
       }
