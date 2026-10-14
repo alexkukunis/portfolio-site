@@ -47,9 +47,6 @@ export function HeroEditor({ value, onChange }: EditorProps<'hero'>) {
         <Field label="Company">
           <TextInput value={value.company} onChange={(v) => set({ company: v })} />
         </Field>
-        <Field label="Year">
-          <TextInput value={value.year} onChange={(v) => set({ year: v })} />
-        </Field>
         <Field label="Duration">
           <TextInput value={value.duration} onChange={(v) => set({ duration: v })} placeholder="e.g. 3 months" />
         </Field>
@@ -59,7 +56,7 @@ export function HeroEditor({ value, onChange }: EditorProps<'hero'>) {
 }
 
 export function HeroRender({ content }: RenderProps<'hero'>) {
-  const pills = [content.role, content.company, content.year, content.duration].filter(Boolean);
+  const pills = [content.role, content.company, content.duration].filter(Boolean);
   const logo = content.logoUrl;
   const logoDark = content.logoUrlDark;
 
