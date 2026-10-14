@@ -9,7 +9,7 @@ const navLinks = [
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
-  { href: '/alex_kukunis_2026_apr.pdf', label: 'Resume', isExternal: true },
+  { href: '/uploads/Alex_Kukunis_Resume.pdf', label: 'Resume', isExternal: false },
 ];
 
 export default function Navbar() {
